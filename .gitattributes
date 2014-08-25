@@ -1,0 +1,15 @@
+*.png binary
+*.ico binary
+*.pfx binary
+*.ism binary
+*.rtf binary
+*.pfx binary
+*.cs text eol=crlf
+*.sln text eol=crlf
+*.xaml text eol=crlf
+*.csproj text eol=crlf
+*.cpp text eol=crlf
+*.h text eol=crlf
+*.cvxproj text eol=crlf
+*.appxmanifest text eol=crlf
+*.targets text eol=crlf

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Defaults.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Basic.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Buttons.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/GroupBoxes.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/TextBoxes.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Navigation.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Window.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

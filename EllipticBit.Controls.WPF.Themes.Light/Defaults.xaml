@@ -1,0 +1,66 @@
+﻿<ResourceDictionary
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	
+	<!-- Window -->
+	<SolidColorBrush x:Key="WindowBackground" Color="#FFF5F5F5" />
+	<SolidColorBrush x:Key="WindowBorderColor" Color="#FF205081" />
+	<SolidColorBrush x:Key="DialogWindowBackground" Color="#80000000" />
+
+	<!-- Fonts -->
+	<SolidColorBrush x:Key="DefaultFontColor" Color="#FF333333" />
+	<SolidColorBrush x:Key="SelectedFontColor" Color="#FFCCCCCC" />
+	<sys:Double x:Key="TitleFontSize">24</sys:Double>
+	<sys:Double x:Key="HeadingFontSize">20</sys:Double>
+	<sys:Double x:Key="ThirdHeadingFontSize">16</sys:Double>
+	<sys:Double x:Key="FourthHeadingFontSize">14</sys:Double>
+	<sys:Double x:Key="FifthHeadingFontSize">12</sys:Double>
+	<sys:Double x:Key="SixthHeadingFontSize">12</sys:Double>
+	<sys:Double x:Key="DefaultFontSize">14</sys:Double>
+	<sys:Double x:Key="SmallFontSize">12</sys:Double>
+	<FontFamily x:Key="DefaultFontFamily">./#Arial</FontFamily>
+	<FontWeight x:Key="DefaultFontWeight">Normal</FontWeight>
+	<SolidColorBrush x:Key="DisabledFontColor" Color="#FF666666" />
+	<SolidColorBrush x:Key="ReadOnlyFontColor" Color="#FF999999" />
+	<FontFamily x:Key="CodeFontFamily">./#Consolas</FontFamily>
+	<sys:Double x:Key="CodeFontSize">12</sys:Double>
+	<SolidColorBrush x:Key="DefaultSelectionColor" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
+
+	<!-- Fields -->
+	<Thickness x:Key="FieldBorderThickness" Left="1" Top="1" Right="1" Bottom="1" />
+	<Thickness x:Key="FieldBorderMargin" Left="1" Top="1" Right="1" Bottom="1" />
+	<SolidColorBrush x:Key="FieldSelectedBorderOverlayColor" Color="#CCE9AF3E" />
+	<Thickness x:Key="FieldSelectedBorderOverlayThickness" Top="2" Bottom="2" Left="2" Right="2" />
+	<CornerRadius x:Key="FieldCornerRadius" BottomLeft="3" BottomRight="3" TopLeft="3" TopRight="3" />
+	<Thickness x:Key="FieldPadding" Top="4" Bottom="4" Left="5" Right="5" />
+	<SolidColorBrush x:Key="FieldBorderColor" Color="#FFCCCCCC" />
+	<LinearGradientBrush x:Key="FieldBackgroundColor" MappingMode="Absolute" StartPoint="4,0" EndPoint="4,4">
+		<GradientStop Color="#FFCCCCCC" Offset="0" />
+		<GradientStop Color="#FFFFFFFF" Offset="1" />
+	</LinearGradientBrush>
+	<SolidColorBrush x:Key="FieldDisabledBorderColor" Color="#FFCCCCCC" />
+	<SolidColorBrush x:Key="FieldDisabledColor" Color="#FFF5F5F5" />
+
+	<Geometry x:Key="ArrowGeometry">M 0 0 L 4 4 L 8 0 Z</Geometry>
+
+	<!-- Button -->
+	<CornerRadius x:Key="ButtonCornerRadius" BottomLeft="3" BottomRight="3" TopLeft="3" TopRight="3" />
+	<Thickness x:Key="ButtonPadding" Top="4" Bottom="4" Left="10" Right="10" />
+	<SolidColorBrush x:Key="ButtonDisabledForegroundColor" Color="#FF999999" />
+	<Thickness x:Key="ButtonGroupBorderThickness" Top="1" Bottom="1" Left="1" Right="1" />
+	<SolidColorBrush x:Key="PrimaryButtonFontColor" Color="#FF3B73AF" />
+	<FontWeight x:Key="PrimaryButtonFontWeight" >Bold</FontWeight>
+
+	<!-- GroupBox -->
+	<SolidColorBrush x:Key="DropDownBorderColor" Color="#FF7F9DB9" />
+	<SolidColorBrush x:Key="DropDownMouseOverColor" Color="#FF3B73AF" />
+	<SolidColorBrush x:Key="DropDownBackgroundColor" Color="#FFFFFFFF" />
+	<CornerRadius x:Key="ComboBoxButtonCornerRadiusRight" BottomLeft="0" BottomRight="3" TopLeft="0" TopRight="3" />
+	<CornerRadius x:Key="ComboBoxDropDownCornerRadius" BottomLeft="3" BottomRight="3" TopLeft="0" TopRight="0" />
+	<Thickness x:Key="ComboBoxButtonBorderThickness" Top="0" Bottom="0" Left="1" Right="0" />
+
+	<!-- GroupBox -->
+
+
+</ResourceDictionary>

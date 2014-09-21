@@ -3,7 +3,7 @@
 					xmlns:ec="http://schemas.ellipticbit.com/controls">
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/Defaults.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Defaults.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 
 	<!-- Groups -->

@@ -3,8 +3,8 @@
 			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/Defaults.xaml"/>
-		<ResourceDictionary Source="pack://application:,,,/Buttons.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Defaults.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Buttons.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 
 	<SolidColorBrush x:Key="HeaderBackground" Color="#FF205081" />

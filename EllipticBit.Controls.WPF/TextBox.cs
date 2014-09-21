@@ -18,23 +18,23 @@ namespace EllipticBit.Controls.WPF
 	public class TextBox : System.Windows.Controls.TextBox
 	{
 		public delegate void ValidateEventHandler(object sender, ValidateEventArgs e);
-		public static RoutedEvent ValidateEvent = EventManager.RegisterRoutedEvent("Validate", RoutingStrategy.Bubble, typeof(ValidateEventHandler), typeof(TextBox));
+		public static readonly RoutedEvent ValidateEvent = EventManager.RegisterRoutedEvent("Validate", RoutingStrategy.Bubble, typeof(ValidateEventHandler), typeof(TextBox));
 
 		public string LabelText { get { return (string)GetValue(LabelTextProperty); } set { SetValue(LabelTextProperty, value); } }
-		public static DependencyProperty LabelTextProperty = DependencyProperty.Register("LabelText", typeof(string), typeof(TextBox));
+		public static readonly DependencyProperty LabelTextProperty = DependencyProperty.Register("LabelText", typeof(string), typeof(TextBox));
 
 		public Brush LabelTextColor { get { return (Brush)GetValue(LabelTextColorProperty); } set { SetValue(LabelTextColorProperty, value); } }
-		public static DependencyProperty LabelTextColorProperty = DependencyProperty.Register("LabelTextColor", typeof(Brush), typeof(TextBox));
+		public static readonly DependencyProperty LabelTextColorProperty = DependencyProperty.Register("LabelTextColor", typeof(Brush), typeof(TextBox));
 
 		public bool IsRequired { get { return (bool)GetValue(IsRequiredProperty); } set { SetValue(IsRequiredProperty, value); } }
-		public static DependencyProperty IsRequiredProperty = DependencyProperty.Register("IsRequired", typeof(bool), typeof(TextBox));
+		public static readonly DependencyProperty IsRequiredProperty = DependencyProperty.Register("IsRequired", typeof(bool), typeof(TextBox));
 
 		public bool IsInvalid { get { return (bool)GetValue(IsInvalidProperty); } private set { SetValue(IsInvalidPropertyKey, value); } }
-		internal static DependencyPropertyKey IsInvalidPropertyKey = DependencyProperty.RegisterReadOnly("IsInvalid", typeof(bool), typeof(TextBox), new PropertyMetadata(false));
+		internal static readonly DependencyPropertyKey IsInvalidPropertyKey = DependencyProperty.RegisterReadOnly("IsInvalid", typeof(bool), typeof(TextBox), new PropertyMetadata(false));
 		public static readonly DependencyProperty IsInvalidProperty = IsInvalidPropertyKey.DependencyProperty;
 
 		public bool HasText { get { return (bool)GetValue(HasTextProperty); } private set { SetValue(HasTextPropertyKey, value); } }
-		internal static DependencyPropertyKey HasTextPropertyKey = DependencyProperty.RegisterReadOnly("HasText", typeof(bool), typeof(TextBox), new PropertyMetadata(false));
+		internal static readonly DependencyPropertyKey HasTextPropertyKey = DependencyProperty.RegisterReadOnly("HasText", typeof(bool), typeof(TextBox), new PropertyMetadata(false));
 		public static readonly DependencyProperty HasTextProperty = HasTextPropertyKey.DependencyProperty;
 
 		static TextBox()

@@ -1,0 +1,45 @@
+﻿<Window x:Class="Sample.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:ebc="http://schemas.ellipticbit.com/controls"
+		Title="MainWindow" Height="350" Width="525">
+	<Grid>
+		<ebc:NestedTabControl>
+			<ebc:NestedTabItem>
+				<ebc:NestedTabItem.Header>
+					<TextBlock Text="Tab One" />
+				</ebc:NestedTabItem.Header>
+				<ebc:NestedTabSubItem>
+					<ebc:NestedTabSubItem.Header>
+						<TextBlock Text="Sub Tab One" />
+					</ebc:NestedTabSubItem.Header>
+				</ebc:NestedTabSubItem>
+				<ebc:NestedTabSubItem>
+					<ebc:NestedTabSubItem.Header>
+						<TextBlock Text="Sub Tab Two" />
+					</ebc:NestedTabSubItem.Header>
+				</ebc:NestedTabSubItem>
+			</ebc:NestedTabItem>
+			<ebc:NestedTabItem>
+				<ebc:NestedTabItem.Header>
+					<TextBlock Text="Tab Two" />
+				</ebc:NestedTabItem.Header>
+				<ebc:NestedTabSubItem>
+					<ebc:NestedTabSubItem.Header>
+						<TextBlock Text="Sub Tab One" />
+					</ebc:NestedTabSubItem.Header>
+				</ebc:NestedTabSubItem>
+				<ebc:NestedTabSubItem>
+					<ebc:NestedTabSubItem.Header>
+						<TextBlock Text="Sub Tab Two" />
+					</ebc:NestedTabSubItem.Header>
+				</ebc:NestedTabSubItem>
+				<ebc:NestedTabSubItem>
+					<ebc:NestedTabSubItem.Header>
+						<TextBlock Text="Sub Tab Three" />
+					</ebc:NestedTabSubItem.Header>
+				</ebc:NestedTabSubItem>
+			</ebc:NestedTabItem>
+		</ebc:NestedTabControl>
+	</Grid>
+</Window>

@@ -4,16 +4,21 @@
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 DataContext="{Binding RelativeSource={RelativeSource Self}}"
-			 Visibility="Collapsed"
+			 Visibility="Collapsed" MinWidth="500"
 			 mc:Ignorable="d" d:DesignHeight="900" d:DesignWidth="900">
 	<Border Background="#66000000" IsHitTestVisible="True" >
 		<Grid>
 			<Grid.RowDefinitions>
-				<RowDefinition Height="*" />
-				<RowDefinition Height="2*" />
-				<RowDefinition Height="*" />
+				<RowDefinition Height="*" MinHeight="50" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" MinHeight="50" />
 			</Grid.RowDefinitions>
-			<Border Background="#FF222222"  Grid.Row="1" >
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" MinWidth="50" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" MinWidth="50" />
+			</Grid.ColumnDefinitions>
+			<Border Background="#FF222222" Grid.Row="1" Grid.Column="1" >
 				<ContentPresenter Content="{Binding Path=ActiveDialog}" Margin="0" />
 			</Border>
 		</Grid>

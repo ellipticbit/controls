@@ -1,12 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/Defaults.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/Basic.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/Buttons.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/GroupBoxes.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/TextBoxes.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/Navigation.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/Window.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Defaults.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Basic.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Buttons.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/GroupBoxes.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/TextBoxes.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/NestedTab.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Navigation.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Window.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

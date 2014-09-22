@@ -60,6 +60,7 @@
     <Compile Include="DragAdorner.cs" />
     <Compile Include="Extensions\Converters.cs" />
     <Compile Include="Extensions\FontSize.cs" />
+    <Compile Include="TabGroup.cs" />
     <Compile Include="Navigation.cs" />
     <Compile Include="NestedTab.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

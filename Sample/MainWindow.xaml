@@ -41,5 +41,42 @@
 				</ebc:NestedTabSubItem>
 			</ebc:NestedTabItem>
 		</ebc:NestedTabControl>
+		<!--<ebc:TabGroupControl>
+			<ebc:TabGroup>
+				<ebc:TabGroup.Header>
+					<TextBlock Text="Tab One" />
+				</ebc:TabGroup.Header>
+				<ebc:TabGroupItem>
+					<ebc:TabGroupItem.Header>
+						<TextBlock Text="Sub Tab One" />
+					</ebc:TabGroupItem.Header>
+				</ebc:TabGroupItem>
+				<ebc:TabGroupItem>
+					<ebc:TabGroupItem.Header>
+						<TextBlock Text="Sub Tab Two" />
+					</ebc:TabGroupItem.Header>
+				</ebc:TabGroupItem>
+			</ebc:TabGroup>
+			<ebc:TabGroup>
+				<ebc:TabGroup.Header>
+					<TextBlock Text="Tab Two" />
+				</ebc:TabGroup.Header>
+				<ebc:TabGroupItem>
+					<ebc:TabGroupItem.Header>
+						<TextBlock Text="Sub Tab One" />
+					</ebc:TabGroupItem.Header>
+				</ebc:TabGroupItem>
+				<ebc:TabGroupItem>
+					<ebc:TabGroupItem.Header>
+						<TextBlock Text="Sub Tab Two" />
+					</ebc:TabGroupItem.Header>
+				</ebc:TabGroupItem>
+				<ebc:TabGroupItem>
+					<ebc:TabGroupItem.Header>
+						<TextBlock Text="Sub Tab Three" />
+					</ebc:TabGroupItem.Header>
+				</ebc:TabGroupItem>
+			</ebc:TabGroup>
+		</ebc:TabGroupControl>-->
 	</Grid>
 </Window>

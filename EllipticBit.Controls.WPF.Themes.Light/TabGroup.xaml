@@ -13,15 +13,7 @@
 	<SolidColorBrush x:Key="TabMouseOverBackgroundColor" Color="#FFE6E6E6" />
 	<SolidColorBrush x:Key="TabPanelBackgroundColor" Color="#FFEEEEEE" />
 
-	<Style x:Key="NestedTabItemContainerStyle" TargetType="{x:Type ebc:NestedTabItem}">
-		<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
-	</Style>
-
-	<Style x:Key="NestedTabSubItemContainerStyle" TargetType="{x:Type ebc:NestedTabSubItem}">
-		<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
-	</Style>
-
-	<Style x:Key="{x:Type ebc:NestedTabControl}" TargetType="{x:Type ebc:NestedTabControl}">
+	<Style x:Key="{x:Type ebc:TabGroupControl}" TargetType="{x:Type ebc:TabGroupControl}">
 		<Setter Property="Padding" Value="0"/>
 		<Setter Property="BorderThickness" Value="0,0,1,0"/>
 		<Setter Property="BorderBrush" Value="{StaticResource FieldBorderColor}"/>
@@ -31,27 +23,26 @@
 		<Setter Property="HorizontalContentAlignment" Value="Center"/>
 		<Setter Property="VerticalContentAlignment" Value="Center"/>
 		<Setter Property="UseLayoutRounding" Value="True" />
-		<Setter Property="ItemContainerStyle" Value="{StaticResource NestedTabItemContainerStyle}" />
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ebc:NestedTabControl}">
+				<ControlTemplate TargetType="{x:Type ebc:TabGroupControl}">
 					<Grid ClipToBounds="true" KeyboardNavigation.TabNavigation="Local">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="Auto"/>
 							<ColumnDefinition Width="*"/>
 						</Grid.ColumnDefinitions>
-						<Border x:Name="HeaderBorder" Grid.Column="0" Grid.Row="0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" />
-						<ItemsControl x:Name="HeaderPanel" Grid.Column="0" Grid.Row="0" ItemsSource="{TemplateBinding Items}" Margin="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" >
+						<Border Grid.Column="0" Grid.Row="0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" />
+						<ItemsControl Grid.Column="0" Grid.Row="0" ItemsSource="{TemplateBinding Items}" Margin="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" >
 							<ItemsControl.ItemsPanel>
 								<ItemsPanelTemplate>
 									<StackPanel Orientation="Vertical" IsItemsHost="True" />
 								</ItemsPanelTemplate>
 							</ItemsControl.ItemsPanel>
-							<!--<ItemsControl.ItemTemplate>
-								<DataTemplate DataType="{x:Type ebc:NestedTabItem}">
+							<ItemsControl.ItemTemplate>
+								<DataTemplate DataType="{x:Type ebc:TabGroup}">
 									<ContentPresenter x:Name="SubContent" Content="{Binding Path=Header}" HorizontalAlignment="Stretch" Margin="0" RecognizesAccessKey="True" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 								</DataTemplate>
-							</ItemsControl.ItemTemplate>-->
+							</ItemsControl.ItemTemplate>
 						</ItemsControl>
 						<ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" Grid.Column="1" KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local"/>
 					</Grid>
@@ -65,7 +56,7 @@
 		</Setter>
 	</Style>
 
-	<Style x:Key="{x:Type ebc:NestedTabItem}" TargetType="{x:Type ebc:NestedTabItem}">
+	<Style x:Key="{x:Type ebc:TabGroup}" TargetType="{x:Type ebc:TabGroup}">
 		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
 		<Setter Property="BorderBrush" Value="{StaticResource FieldBorderColor}"/>
 		<Setter Property="Background" Value="{StaticResource TabDefaultBackgroundColor}"/>
@@ -76,31 +67,20 @@
 		<Setter Property="MinWidth" Value="100"/>
 		<Setter Property="UseLayoutRounding" Value="True" />
 		<Setter Property="Padding" Value="10,5" />
-		<Setter Property="Margin" Value="-1,0,0,0" />
+		<Setter Property="Margin" Value="0" />
+		<Setter Property="TabStripPlacement" Value="Left" />
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ebc:NestedTabItem}">
+				<ControlTemplate TargetType="{x:Type ebc:TabGroup}">
 					<Grid>
 						<Grid.RowDefinitions>
 							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="Auto"/>
 						</Grid.RowDefinitions>
 						<Border x:Name="Bd" Grid.Row="0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
-							<ContentPresenter x:Name="Content" ContentSource="Header" HorizontalAlignment="Left" Margin="0,-1,0,0" RecognizesAccessKey="True" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+							<ContentPresenter x:Name="Content" ContentSource="Header" HorizontalAlignment="Left" Margin="0" RecognizesAccessKey="True" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 						</Border>
-						<!--<ItemsControl Grid.Row="1" ItemsSource="{TemplateBinding Items}" ItemContainerStyle="{StaticResource NestedTabSubItemContainerStyle}" Visibility="{TemplateBinding IsSelected, Converter={StaticResource BoolVisibilityConverter}}" Margin="20,0,0,0">-->
-						<ItemsControl Grid.Row="1" ItemsSource="{TemplateBinding Items}" Margin="0">
-							<ItemsControl.ItemsPanel>
-								<ItemsPanelTemplate>
-									<StackPanel Orientation="Vertical" IsItemsHost="True" />
-								</ItemsPanelTemplate>
-							</ItemsControl.ItemsPanel>
-							<ItemsControl.ItemTemplate>
-								<DataTemplate DataType="{x:Type ebc:NestedTabSubItem}">
-									<ContentPresenter x:Name="SubContent" Content="{Binding Path=Header}" HorizontalAlignment="Stretch" Margin="0" RecognizesAccessKey="True" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-								</DataTemplate>
-							</ItemsControl.ItemTemplate>
-						</ItemsControl>
+						<TabPanel x:Name="HeaderPanel" Grid.Column="0" Grid.Row="1" IsItemsHost="true" Margin="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsSelected" Value="True">

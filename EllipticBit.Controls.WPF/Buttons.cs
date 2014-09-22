@@ -220,11 +220,11 @@ namespace EllipticBit.Controls.WPF
 
 		private static void IsCheckedChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs e)
 		{
-			var de = o as GroupButtonPanel;
+			var de = o as GroupToggleButton;
 			if (de == null) return;
 
-			if ((bool)e.NewValue) de.RaiseEvent(new RoutedEventArgs(CheckedEvent, de));
-			else de.RaiseEvent(new RoutedEventArgs(UncheckedEvent, de));
+			if ((bool)e.NewValue) de.RaiseEvent(new RoutedEventArgs(CheckedEvent));
+			else de.RaiseEvent(new RoutedEventArgs(UncheckedEvent));
 		}
 
 		protected override void OnClick()

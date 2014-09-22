@@ -4,7 +4,7 @@
 		xmlns:ebc="http://schemas.ellipticbit.com/controls"
 		Title="MainWindow" Height="350" Width="525">
 	<Grid>
-		<ebc:NestedTabControl>
+		<!--<ebc:NestedTabControl>
 			<ebc:NestedTabItem>
 				<ebc:NestedTabItem.Header>
 					<TextBlock Text="Tab One" />
@@ -40,8 +40,8 @@
 					</ebc:NestedTabSubItem.Header>
 				</ebc:NestedTabSubItem>
 			</ebc:NestedTabItem>
-		</ebc:NestedTabControl>
-		<!--<ebc:TabGroupControl>
+		</ebc:NestedTabControl>-->
+		<ebc:TabGroupControl>
 			<ebc:TabGroup>
 				<ebc:TabGroup.Header>
 					<TextBlock Text="Tab One" />
@@ -77,6 +77,6 @@
 					</ebc:TabGroupItem.Header>
 				</ebc:TabGroupItem>
 			</ebc:TabGroup>
-		</ebc:TabGroupControl>-->
+		</ebc:TabGroupControl>
 	</Grid>
 </Window>

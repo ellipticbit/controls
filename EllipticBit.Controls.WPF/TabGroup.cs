@@ -90,6 +90,11 @@ namespace EllipticBit.Controls.WPF
 			if (Parent == null) return;
 			Parent.SelectedTab = SelectedItem as TabGroupItem;
 		}
+
+		protected override DependencyObject GetContainerForItemOverride()
+		{
+			return new TabGroupItem();
+		}
 	}
 
 	public class TabGroupItem : TabItem

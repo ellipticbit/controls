@@ -38,11 +38,6 @@
 									<StackPanel Orientation="Vertical" IsItemsHost="True" />
 								</ItemsPanelTemplate>
 							</ItemsControl.ItemsPanel>
-							<ItemsControl.ItemTemplate>
-								<DataTemplate DataType="{x:Type ebc:TabGroup}">
-									<ContentPresenter x:Name="SubContent" Content="{Binding Path=Header}" HorizontalAlignment="Stretch" Margin="0" RecognizesAccessKey="True" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-								</DataTemplate>
-							</ItemsControl.ItemTemplate>
 						</ItemsControl>
 						<ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" Grid.Column="1" KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local"/>
 					</Grid>

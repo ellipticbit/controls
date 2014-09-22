@@ -7,6 +7,7 @@
 		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/GroupBoxes.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/TextBoxes.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/NestedTab.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/TabGroup.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Navigation.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Window.xaml" />
 	</ResourceDictionary.MergedDictionaries>

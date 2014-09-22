@@ -9,7 +9,7 @@
 		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
 		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
 		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+		<!--<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />-->
 	</Style>
 
 	<Style x:Key="{x:Type Hyperlink}" TargetType="{x:Type Hyperlink}">
@@ -17,7 +17,7 @@
 		<Setter Property="Foreground" Value="#FF3B73AF" />
 		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
 		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+		<!--<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />-->
 		<Style.Triggers>
 			<Trigger Property="IsMouseOver" Value="True">
 				<Setter Property="TextDecorations" Value="Underline" />
@@ -29,7 +29,7 @@
 		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
 		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
 		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+		<!--<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />-->
 		<Setter Property="Background" Value="Transparent" />
 		<Setter Property="BorderBrush" Value="Transparent" />
 		<Setter Property="BorderThickness" Value="0" />

@@ -4,13 +4,15 @@
 			xmlns:sys="clr-namespace:System;assembly=mscorlib">
 	
 	<!-- Window -->
-	<SolidColorBrush x:Key="WindowBackground" Color="#FFF5F5F5" />
+	<SolidColorBrush x:Key="WindowBackground" Color="#FFFFFFFF" />
 	<SolidColorBrush x:Key="WindowBorderColor" Color="#FF205081" />
 	<SolidColorBrush x:Key="DialogWindowBackground" Color="#80000000" />
 
 	<!-- Fonts -->
-	<SolidColorBrush x:Key="DefaultFontColor" Color="#FF333333" />
-	<SolidColorBrush x:Key="SelectedFontColor" Color="#FFCCCCCC" />
+	<SolidColorBrush x:Key="DefaultFontColor" Color="#FF111111" />
+	<SolidColorBrush x:Key="SelectedFontColor" Color="#FFEEEEEE" />
+	<SolidColorBrush x:Key="DisabledFontColor" Color="#FF666666" />
+	<SolidColorBrush x:Key="ReadOnlyFontColor" Color="#FF999999" />
 	<sys:Double x:Key="TitleFontSize">24</sys:Double>
 	<sys:Double x:Key="HeadingFontSize">20</sys:Double>
 	<sys:Double x:Key="ThirdHeadingFontSize">16</sys:Double>
@@ -19,10 +21,8 @@
 	<sys:Double x:Key="SixthHeadingFontSize">12</sys:Double>
 	<sys:Double x:Key="DefaultFontSize">14</sys:Double>
 	<sys:Double x:Key="SmallFontSize">12</sys:Double>
-	<FontFamily x:Key="DefaultFontFamily">./#Arial</FontFamily>
+	<FontFamily x:Key="DefaultFontFamily">./#Segoe UI</FontFamily>
 	<FontWeight x:Key="DefaultFontWeight">Normal</FontWeight>
-	<SolidColorBrush x:Key="DisabledFontColor" Color="#FF666666" />
-	<SolidColorBrush x:Key="ReadOnlyFontColor" Color="#FF999999" />
 	<FontFamily x:Key="CodeFontFamily">./#Consolas</FontFamily>
 	<sys:Double x:Key="CodeFontSize">12</sys:Double>
 	<SolidColorBrush x:Key="DefaultSelectionColor" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />

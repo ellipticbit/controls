@@ -57,14 +57,18 @@ namespace EllipticBit.Controls.WPF
 			var tgi = e.NewValue as TabGroupItem;
 			if (tgc == null) return;
 
-			foreach (var y in (from x in tgc.Items from z in x.Items where !Equals(z, tgi) select z).Where(a => a != null))
+			foreach (var y in tgc.Items.SelectMany(x => x.Items.OfType<TabGroupItem>().Where(y => !Equals(y, tgi))))
 				y.IsSelected = false;
+
+			//foreach (var y in (from x in tgc.Items from z in x.Items where !Equals(z, tgi) select z).Where(a => a != null))
+			//	y.IsSelected = false;
 
 			tgc.RaiseEvent(new RoutedEventArgs(SelectedTabChangedEvent));
 
-			if(tgi != null)
+			if (tgi != null)
+			{
 				tgc.SelectedContent = tgi.Content;
-
+			}
 		}
 	}
 
@@ -74,14 +78,14 @@ namespace EllipticBit.Controls.WPF
 		public object Header { get { return (object)GetValue(HeaderProperty); } set { SetValue(HeaderProperty, value); } }
 		public static readonly DependencyProperty HeaderProperty = DependencyProperty.Register("Header", typeof(object), typeof(TabGroup));
 
-		public new ObservableCollection<TabGroupItem> Items { get { return (ObservableCollection<TabGroupItem>)GetValue(ItemsProperty); } set { SetValue(ItemsProperty, value); } }
-		public static readonly DependencyProperty ItemsProperty = DependencyProperty.Register("Items", typeof(ObservableCollection<TabGroupItem>), typeof(TabGroup));
+		//public new ObservableCollection<TabGroupItem> Items { get { return (ObservableCollection<TabGroupItem>)GetValue(ItemsProperty); } set { SetValue(ItemsProperty, value); } }
+		//public static readonly DependencyProperty ItemsProperty = DependencyProperty.Register("Items", typeof(ObservableCollection<TabGroupItem>), typeof(TabGroup));
 
 		internal new TabGroupControl Parent { get; set; }
 
 		public TabGroup()
 		{
-			Items = new ObservableCollection<TabGroupItem>();
+			//Items = new ObservableCollection<TabGroupItem>();
 			SelectionChanged += TabGroup_SelectionChanged;
 		}
 
@@ -91,14 +95,10 @@ namespace EllipticBit.Controls.WPF
 			Parent.SelectedTab = SelectedItem as TabGroupItem;
 		}
 
-		protected override DependencyObject GetContainerForItemOverride()
-		{
-			return new TabGroupItem();
-		}
 	}
 
 	public class TabGroupItem : TabItem
 	{
-		
+
 	}
 }

@@ -50,11 +50,17 @@
 					<ebc:TabGroupItem.Header>
 						<TextBlock Text="Sub Tab One" />
 					</ebc:TabGroupItem.Header>
+					<Grid>
+						<Label Content="Tab One Content" />
+					</Grid>
 				</ebc:TabGroupItem>
 				<ebc:TabGroupItem>
 					<ebc:TabGroupItem.Header>
 						<TextBlock Text="Sub Tab Two" />
 					</ebc:TabGroupItem.Header>
+					<Grid>
+						<Label Content="Tab Two Content" />
+					</Grid>
 				</ebc:TabGroupItem>
 			</ebc:TabGroup>
 			<ebc:TabGroup>
@@ -65,16 +71,25 @@
 					<ebc:TabGroupItem.Header>
 						<TextBlock Text="Sub Tab One" />
 					</ebc:TabGroupItem.Header>
+					<Grid>
+						<Label Content="Tab One Content" />
+					</Grid>
 				</ebc:TabGroupItem>
 				<ebc:TabGroupItem>
 					<ebc:TabGroupItem.Header>
 						<TextBlock Text="Sub Tab Two" />
 					</ebc:TabGroupItem.Header>
+					<Grid>
+						<Label Content="Tab Two Content" />
+					</Grid>
 				</ebc:TabGroupItem>
 				<ebc:TabGroupItem>
 					<ebc:TabGroupItem.Header>
 						<TextBlock Text="Sub Tab Three" />
 					</ebc:TabGroupItem.Header>
+					<Grid>
+						<Label Content="Tab Three Content" />
+					</Grid>
 				</ebc:TabGroupItem>
 			</ebc:TabGroup>
 		</ebc:TabGroupControl>

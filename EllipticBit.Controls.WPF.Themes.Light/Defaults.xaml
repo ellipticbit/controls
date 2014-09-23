@@ -46,7 +46,7 @@
 
 	<!-- Button -->
 	<CornerRadius x:Key="ButtonCornerRadius" BottomLeft="3" BottomRight="3" TopLeft="3" TopRight="3" />
-	<Thickness x:Key="ButtonPadding" Top="3" Bottom="3" Left="5" Right="5" />
+	<Thickness x:Key="ButtonPadding" Top="4" Bottom="4" Left="10" Right="10" />
 	<SolidColorBrush x:Key="ButtonDisabledForegroundColor" Color="#FF999999" />
 	<Thickness x:Key="ButtonGroupBorderThickness" Top="1" Bottom="1" Left="1" Right="1" />
 	<SolidColorBrush x:Key="PrimaryButtonFontColor" Color="#FF3B73AF" />

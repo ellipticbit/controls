@@ -31,7 +31,7 @@
 				<ControlTemplate TargetType="{x:Type TextBoxBase}">
 					<Grid>
 						<Border Margin="{StaticResource FieldBorderMargin}" Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource FieldCornerRadius}" >
-							<ScrollViewer Margin="{TemplateBinding Padding}" x:Name="PART_ContentHost" UseLayoutRounding="True" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" />
+							<ScrollViewer Margin="{TemplateBinding Padding}" Padding="0" x:Name="PART_ContentHost" UseLayoutRounding="True" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" />
 						</Border>
 						<Border x:Name="FocusedOverlay" Visibility="Collapsed" BorderBrush="{StaticResource FieldSelectedBorderOverlayColor}" BorderThickness="{StaticResource FieldSelectedBorderOverlayThickness}" CornerRadius="{StaticResource FieldCornerRadius}" />
 					</Grid>

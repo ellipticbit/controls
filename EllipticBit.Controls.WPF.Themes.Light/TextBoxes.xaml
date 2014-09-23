@@ -87,6 +87,7 @@
 		<Setter Property="Background" Value="{StaticResource FieldBackgroundColor}"/>
 		<Setter Property="BorderBrush" Value="{StaticResource FieldBorderColor}"/>
 		<Setter Property="BorderThickness" Value="{StaticResource FieldBorderThickness}" />
+		<Setter Property="Padding" Value="{StaticResource FieldPadding}" />
 		<Setter Property="UseLayoutRounding" Value="true"/>
 		<Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
 		<Setter Property="HorizontalContentAlignment" Value="Stretch" />

@@ -77,13 +77,6 @@
 							<ContentPresenter x:Name="Content" ContentSource="Header" HorizontalAlignment="Left" Margin="0" RecognizesAccessKey="True" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 						</Border>
 						<TabPanel x:Name="HeaderPanel" Grid.Column="0" Grid.Row="1" IsItemsHost="true" Margin="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
-						<!--<ItemsControl ItemsSource="{TemplateBinding Items}" x:Name="HeaderPanel" Grid.Column="0" Grid.Row="1" Margin="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" >
-							<ItemsControl.ItemsPanel>
-								<ItemsPanelTemplate>
-									<StackPanel IsItemsHost="True" Orientation="Vertical" />
-								</ItemsPanelTemplate>
-							</ItemsControl.ItemsPanel>
-						</ItemsControl>-->
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsEnabled" Value="False">
@@ -106,7 +99,7 @@
 		<Setter Property="VerticalContentAlignment" Value="Stretch"/>
 		<Setter Property="MinWidth" Value="100"/>
 		<Setter Property="UseLayoutRounding" Value="True" />
-		<Setter Property="Padding" Value="10,5" />
+		<Setter Property="Padding" Value="25,5" />
 		<Setter Property="Margin" Value="0" />
 		<Setter Property="Template">
 			<Setter.Value>
@@ -116,7 +109,7 @@
 							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="Auto"/>
 						</Grid.RowDefinitions>
-						<Border x:Name="Bd" Grid.Row="0" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+						<Border x:Name="Bd" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
 							<ContentPresenter x:Name="Content" ContentSource="Header" HorizontalAlignment="Left" Margin="0" RecognizesAccessKey="True" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
 						</Border>
 					</Grid>
@@ -130,7 +123,6 @@
 								<Condition Property="IsMouseOver" Value="True"/>
 							</MultiTrigger.Conditions>
 							<Setter Property="Background" Value="{StaticResource TabMouseOverBackgroundColor}"/>
-							<Setter Property="BorderThickness" TargetName="Bd" Value="1,1,0,1"/>
 						</MultiTrigger>
 						<Trigger Property="IsEnabled" Value="False">
 							<Setter Property="Background" Value="{StaticResource FieldDisabledColor}"/>

@@ -77,6 +77,21 @@ namespace EllipticBit.Controls.WPF.Extensions
 		}
 	}
 
+	[ValueConversion(typeof(object), typeof(Visibility))]
+	public class NullVisibilityConverter : IValueConverter
+	{
+		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			var param = System.Convert.ToBoolean(parameter);
+			return value == null ? param ? Visibility.Hidden : Visibility.Collapsed : Visibility.Visible;
+		}
+
+		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
 	[ValueConversion(typeof(string), typeof(string))]
 	public class ToUppercaseValueConverter : IValueConverter
 	{

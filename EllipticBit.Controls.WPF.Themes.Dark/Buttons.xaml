@@ -9,7 +9,7 @@
 	<!-- Groups -->
 	<CornerRadius x:Key="ButtonGroupCornerRadiusSingle" BottomLeft="3" BottomRight="3" TopLeft="3" TopRight="3" />
 	<CornerRadius x:Key="ButtonGroupCornerRadiusMiddle" BottomLeft="0" BottomRight="0" TopLeft="0" TopRight="0" />
-	<CornerRadius x:Key="ButtonGroupCornerRadiusLeft" BottomLeft="3" BottomRight="0" TopLeft="3" TopRight="0" />
+	<CornerRadius x:Key="ButtonGroupCornerRadiusLeft" BottomLeft="3" BottomRight="0" TopLeft="3" TopRight="0" />	
 	<CornerRadius x:Key="ButtonGroupCornerRadiusRight" BottomLeft="0" BottomRight="3" TopLeft="0" TopRight="3" />
 	<CornerRadius x:Key="ButtonGroupCornerRadiusTop" BottomLeft="0" BottomRight="0" TopLeft="3" TopRight="3" />
 	<CornerRadius x:Key="ButtonGroupCornerRadiusBottom" BottomLeft="3" BottomRight="3" TopLeft="0" TopRight="0" />
@@ -19,25 +19,25 @@
 	<Thickness x:Key="ButtonGroupBorderThicknessHorizontal" Top="1" Bottom="1" Left="0" Right="1" />
 
 	<!-- Standard Button -->
-	<SolidColorBrush x:Key="ButtonBorderColor" Color="#FFCCCCCC" />
+	<SolidColorBrush x:Key="ButtonBorderColor" Color="#FF333333" />
 	<LinearGradientBrush x:Key="ButtonBackgroundColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFFFFFFF" Offset="0" />
-		<GradientStop Color="#FFF2F2F2" Offset="1" />
+		<GradientStop Color="#FF000000" Offset="0" />
+		<GradientStop Color="#FF0D0D0D" Offset="1" />
 	</LinearGradientBrush>
-	<SolidColorBrush x:Key="ButtonMouseOverBorderColor" Color="#FF999999" />
+	<SolidColorBrush x:Key="ButtonMouseOverBorderColor" Color="#FF777777" />
 	<LinearGradientBrush x:Key="ButtonMouseOverColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFFFFFFF" Offset="0" />
-		<GradientStop Color="#FFF7F7F7" Offset="1" />
+		<GradientStop Color="#FF000000" Offset="0" />
+		<GradientStop Color="#FF090909" Offset="1" />
 	</LinearGradientBrush>
-	<SolidColorBrush x:Key="ButtonPressedBorderColor" Color="#FF7F7F7F" />
+	<SolidColorBrush x:Key="ButtonPressedBorderColor" Color="#FF909090" />
 	<LinearGradientBrush x:Key="ButtonPressedColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFE5E5E5" Offset="0" />
-		<GradientStop Color="#FFD8D8D8" Offset="1" />
+		<GradientStop Color="#FF151515" Offset="0" />
+		<GradientStop Color="#FF282828" Offset="1" />
 	</LinearGradientBrush>
-	<SolidColorBrush x:Key="ButtonDisabledBorderColor" Color="#FF7F7F7F" />
+	<SolidColorBrush x:Key="ButtonDisabledBorderColor" Color="#FF909090" />
 	<LinearGradientBrush x:Key="ButtonDisabledColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFE5E5E5" Offset="0" />
-		<GradientStop Color="#FFD8D8D8" Offset="1" />
+		<GradientStop Color="#FF1A1A1A" Offset="0" />
+		<GradientStop Color="#FF282828" Offset="1" />
 	</LinearGradientBrush>
 
 	<!-- Primary Button -->
@@ -65,23 +65,23 @@
 	<!-- Subtle Button -->
 	<SolidColorBrush x:Key="SubtleButtonBorderColor" Color="#00FFFFFF" />
 	<SolidColorBrush x:Key="SubtleButtonBackgroundColor" Color="#00FFFFFF" />
-	<SolidColorBrush x:Key="SubtleButtonMouseOverBorderColor" Color="#FF999999" />
+	<SolidColorBrush x:Key="SubtleButtonMouseOverBorderColor" Color="#FF777777" />
 	<LinearGradientBrush x:Key="SubtleButtonMouseOverColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFFFFFFF" Offset="0" />
-		<GradientStop Color="#FFF7F7F7" Offset="1" />
+		<GradientStop Color="#FF000000" Offset="0" />
+		<GradientStop Color="#FF090909" Offset="1" />
 	</LinearGradientBrush>
-	<SolidColorBrush x:Key="SubtleButtonPressedBorderColor" Color="#FF7F7F7F" />
+	<SolidColorBrush x:Key="SubtleButtonPressedBorderColor" Color="#FF9F9F9F" />
 	<LinearGradientBrush x:Key="SubtleButtonPressedColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFE5E5E5" Offset="0" />
-		<GradientStop Color="#FFD8D8D8" Offset="1" />
+		<GradientStop Color="#FF1A1A1A" Offset="0" />
+		<GradientStop Color="#FF282828" Offset="1" />
 	</LinearGradientBrush>
 
 	<!-- Toggle Button -->
-	<SolidColorBrush x:Key="ToggleButtonCheckedBorderColor" Color="#FF7F7F7F" />
+	<SolidColorBrush x:Key="ToggleButtonCheckedBorderColor" Color="#FF090909" />
 	<LinearGradientBrush x:Key="ToggleButtonCheckedColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFCCCCCC" Offset="0" />
-		<GradientStop Color="#FFDDDDDD" Offset="0.13" />
-		<GradientStop Color="#FFDDDDDD" Offset="1" />
+		<GradientStop Color="#FF333333" Offset="0" />
+		<GradientStop Color="#FF222222" Offset="0.13" />
+		<GradientStop Color="#FF222222" Offset="1" />
 	</LinearGradientBrush>
 
 

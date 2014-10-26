@@ -8,10 +8,10 @@
 	
 	<ebc:BoolVisibilityConverter x:Key="BoolVisibilityConverter" />
 
-	<SolidColorBrush x:Key="TabDefaultBackgroundColor" Color="#FFEEEEEE" />
-	<SolidColorBrush x:Key="TabSelectedBackgroundColor" Color="#FFFFFFFF" />
-	<SolidColorBrush x:Key="TabMouseOverBackgroundColor" Color="#FFE6E6E6" />
-	<SolidColorBrush x:Key="TabPanelBackgroundColor" Color="#FFEEEEEE" />
+	<SolidColorBrush x:Key="TabDefaultBackgroundColor" Color="#FF111111" />
+	<SolidColorBrush x:Key="TabSelectedBackgroundColor" Color="#FF000000" />
+	<SolidColorBrush x:Key="TabMouseOverBackgroundColor" Color="#FF262626" />
+	<SolidColorBrush x:Key="TabPanelBackgroundColor" Color="#FF111111" />
 
 	<Style x:Key="{x:Type ebc:TabGroupControl}" TargetType="{x:Type ebc:TabGroupControl}">
 		<Setter Property="Padding" Value="0"/>

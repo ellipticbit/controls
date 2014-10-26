@@ -2,22 +2,22 @@
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Defaults.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Dark;component/Defaults.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 
 	<Style x:Key="{x:Type TextBlock}" TargetType="{x:Type TextBlock}" >
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+		<!--<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
 		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
 		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />-->
 	</Style>
 
 	<Style x:Key="{x:Type Hyperlink}" TargetType="{x:Type Hyperlink}">
 		<Setter Property="TextDecorations" Value="None" />
 		<Setter Property="Foreground" Value="#FF3B73AF" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+		<!--<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />-->
+		<!--<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />-->
 		<Style.Triggers>
 			<Trigger Property="IsMouseOver" Value="True">
 				<Setter Property="TextDecorations" Value="Underline" />
@@ -27,9 +27,9 @@
 
 	<Style x:Key="{x:Type Label}" TargetType="{x:Type Label}" >
 		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+		<!--<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
 		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />-->
 		<Setter Property="Background" Value="Transparent" />
 		<Setter Property="BorderBrush" Value="Transparent" />
 		<Setter Property="BorderThickness" Value="0" />

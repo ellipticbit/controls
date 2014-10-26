@@ -2,7 +2,7 @@
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Defaults.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Dark;component/Defaults.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 
 	<Thickness x:Key="MultilineTextboxPadding" Top="2" Bottom="0" Left="2" Right="0" />
@@ -31,7 +31,7 @@
 				<ControlTemplate TargetType="{x:Type TextBoxBase}">
 					<Grid>
 						<Border Margin="{StaticResource FieldBorderMargin}" Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource FieldCornerRadius}" >
-							<ScrollViewer Margin="{TemplateBinding Padding}" x:Name="PART_ContentHost" UseLayoutRounding="True" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" />
+							<ScrollViewer Margin="{TemplateBinding Padding}" Padding="0" x:Name="PART_ContentHost" UseLayoutRounding="True" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" />
 						</Border>
 						<Border x:Name="FocusedOverlay" Visibility="Collapsed" BorderBrush="{StaticResource FieldSelectedBorderOverlayColor}" BorderThickness="{StaticResource FieldSelectedBorderOverlayThickness}" CornerRadius="{StaticResource FieldCornerRadius}" />
 					</Grid>
@@ -87,6 +87,7 @@
 		<Setter Property="Background" Value="{StaticResource FieldBackgroundColor}"/>
 		<Setter Property="BorderBrush" Value="{StaticResource FieldBorderColor}"/>
 		<Setter Property="BorderThickness" Value="{StaticResource FieldBorderThickness}" />
+		<Setter Property="Padding" Value="{StaticResource FieldPadding}" />
 		<Setter Property="UseLayoutRounding" Value="true"/>
 		<Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
 		<Setter Property="HorizontalContentAlignment" Value="Stretch" />

@@ -2,7 +2,7 @@
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Defaults.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Dark;component/Defaults.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 
 	<SolidColorBrush x:Key="TabDefaultBackgroundColor" Color="#FFEEEEEE" />
@@ -48,24 +48,24 @@
 							<Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0"/>
 							<Setter Property="Grid.Row" TargetName="HeaderBorder" Value="0"/>
 							<Setter Property="Grid.Column" TargetName="HeaderPanel" Value="0"/>
-							<Setter Property="Grid.Column" TargetName="HeaderBorder" Value="1"/>
+							<Setter Property="Grid.Column" TargetName="HeaderBorder" Value="0"/>
 							<Setter Property="Width" TargetName="ColumnDefinition0" Value="Auto"/>
 							<Setter Property="Width" TargetName="ColumnDefinition1" Value="*"/>
 							<Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
 							<Setter Property="Height" TargetName="RowDefinition1" Value="0"/>
-							<Setter Property="Margin" TargetName="HeaderPanel" Value="0,5"/>
+							<Setter Property="Margin" TargetName="HeaderPanel" Value="0,21"/>
 							<Setter Property="BorderThickness" Value="0,0,1,0"/>
 						</Trigger>
 						<Trigger Property="TabStripPlacement" Value="Right">
 							<Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0"/>
 							<Setter Property="Grid.Row" TargetName="HeaderBorder" Value="0"/>
 							<Setter Property="Grid.Column" TargetName="HeaderPanel" Value="1"/>
-							<Setter Property="Grid.Column" TargetName="HeaderBorder" Value="0"/>
+							<Setter Property="Grid.Column" TargetName="HeaderBorder" Value="1"/>
 							<Setter Property="Width" TargetName="ColumnDefinition0" Value="*"/>
 							<Setter Property="Width" TargetName="ColumnDefinition1" Value="Auto"/>
 							<Setter Property="Height" TargetName="RowDefinition0" Value="*"/>
 							<Setter Property="Height" TargetName="RowDefinition1" Value="0"/>
-							<Setter Property="Margin" TargetName="HeaderPanel" Value="0,5"/>
+							<Setter Property="Margin" TargetName="HeaderPanel" Value="0,21"/>
 							<Setter Property="BorderThickness" Value="1,0,0,0"/>
 						</Trigger>
 						<Trigger Property="IsEnabled" Value="false">
@@ -108,18 +108,13 @@
 							</MultiTrigger.Conditions>
 							<Setter Property="Background" Value="{StaticResource TabMouseOverBackgroundColor}"/>
 						</MultiTrigger>
-						<Trigger Property="TabStripPlacement" Value="Bottom">
-							<Setter Property="BorderThickness" TargetName="Bd" Value="1,0,1,1"/>
-						</Trigger>
 						<Trigger Property="TabStripPlacement" Value="Left">
-							<Setter Property="BorderThickness" TargetName="Bd" Value="1,1,0,1"/>
-							<Setter Property="Padding" Value="15,10,5,10"/>
 							<Setter TargetName="Content" Property="HorizontalAlignment" Value="Left"/>
+							<Setter Property="Margin" Value="0,-1,0,0" />
 						</Trigger>
 						<Trigger Property="TabStripPlacement" Value="Right">
-							<Setter Property="BorderThickness" TargetName="Bd" Value="0,1,1,1"/>
-							<Setter Property="Padding" Value="15,10,5,10"/>
 							<Setter TargetName="Content" Property="HorizontalAlignment" Value="Left"/>
+							<Setter Property="Margin" Value="0,-1,0,0" />
 						</Trigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
@@ -140,14 +135,14 @@
 								<Condition Property="IsSelected" Value="True"/>
 								<Condition Property="TabStripPlacement" Value="Left"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="BorderThickness" TargetName="Bd" Value="0,1,1,1"/>
+							<Setter Property="BorderThickness" TargetName="Bd" Value="1,1,0,1"/>
 						</MultiTrigger>
 						<MultiTrigger>
 							<MultiTrigger.Conditions>
 								<Condition Property="IsSelected" Value="True"/>
 								<Condition Property="TabStripPlacement" Value="Right"/>
 							</MultiTrigger.Conditions>
-							<Setter Property="BorderThickness" TargetName="Bd" Value="1,1,0,1"/>
+							<Setter Property="BorderThickness" TargetName="Bd" Value="0,1,1,1"/>
 						</MultiTrigger>
 						<Trigger Property="IsEnabled" Value="False">
 							<Setter Property="Background" Value="{StaticResource FieldDisabledColor}"/>

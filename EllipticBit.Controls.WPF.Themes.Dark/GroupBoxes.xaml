@@ -3,8 +3,8 @@
 
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Defaults.xaml"/>
-		<ResourceDictionary Source="pack://application:,,,/Prospective.Controls;component/Themes/Dark/Buttons.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Dark;component/Defaults.xaml"/>
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Dark;component/Buttons.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 
 	<Style x:Key="ComboBoxButtonStyle" TargetType="{x:Type ToggleButton}">

@@ -4,13 +4,13 @@
 			xmlns:sys="clr-namespace:System;assembly=mscorlib">
 	
 	<!-- Window -->
-	<SolidColorBrush x:Key="WindowBackground" Color="#FFFFFFFF" />
+	<SolidColorBrush x:Key="WindowBackground" Color="#FF222222" />
 	<SolidColorBrush x:Key="WindowBorderColor" Color="#FF205081" />
-	<SolidColorBrush x:Key="DialogWindowBackground" Color="#80000000" />
+	<SolidColorBrush x:Key="DialogWindowBackground" Color="#80FFFFFF" />
 
 	<!-- Fonts -->
-	<SolidColorBrush x:Key="DefaultFontColor" Color="#FF111111" />
-	<SolidColorBrush x:Key="SelectedFontColor" Color="#FFEEEEEE" />
+	<SolidColorBrush x:Key="DefaultFontColor" Color="#FFEEEEEE" />
+	<SolidColorBrush x:Key="SelectedFontColor" Color="#FF111111" />
 	<SolidColorBrush x:Key="DisabledFontColor" Color="#FF666666" />
 	<SolidColorBrush x:Key="ReadOnlyFontColor" Color="#FF999999" />
 	<sys:Double x:Key="TitleFontSize">24</sys:Double>
@@ -34,13 +34,13 @@
 	<Thickness x:Key="FieldSelectedBorderOverlayThickness" Top="2" Bottom="2" Left="2" Right="2" />
 	<CornerRadius x:Key="FieldCornerRadius" BottomLeft="3" BottomRight="3" TopLeft="3" TopRight="3" />
 	<Thickness x:Key="FieldPadding" Top="2" Bottom="2" Left="1" Right="1" />
-	<SolidColorBrush x:Key="FieldBorderColor" Color="#FFCCCCCC" />
+	<SolidColorBrush x:Key="FieldBorderColor" Color="#FF333333" />
 	<LinearGradientBrush x:Key="FieldBackgroundColor" MappingMode="Absolute" StartPoint="4,0" EndPoint="4,4">
-		<GradientStop Color="#FFCCCCCC" Offset="0" />
-		<GradientStop Color="#FFFFFFFF" Offset="1" />
+		<GradientStop Color="#FF333333" Offset="0" />
+		<GradientStop Color="#FF000000" Offset="1" />
 	</LinearGradientBrush>
-	<SolidColorBrush x:Key="FieldDisabledBorderColor" Color="#FFCCCCCC" />
-	<SolidColorBrush x:Key="FieldDisabledColor" Color="#FFF5F5F5" />
+	<SolidColorBrush x:Key="FieldDisabledBorderColor" Color="#FF333333" />
+	<SolidColorBrush x:Key="FieldDisabledColor" Color="#FF151515" />
 
 	<Geometry x:Key="ArrowGeometry">M 0 0 L 4 4 L 8 0 Z</Geometry>
 
@@ -55,7 +55,7 @@
 	<!-- GroupBox -->
 	<SolidColorBrush x:Key="DropDownBorderColor" Color="#FF7F9DB9" />
 	<SolidColorBrush x:Key="DropDownMouseOverColor" Color="#FF3B73AF" />
-	<SolidColorBrush x:Key="DropDownBackgroundColor" Color="#FFFFFFFF" />
+	<SolidColorBrush x:Key="DropDownBackgroundColor" Color="#FF222222" />
 	<CornerRadius x:Key="ComboBoxButtonCornerRadiusRight" BottomLeft="0" BottomRight="3" TopLeft="0" TopRight="3" />
 	<CornerRadius x:Key="ComboBoxDropDownCornerRadius" BottomLeft="3" BottomRight="3" TopLeft="0" TopRight="0" />
 	<Thickness x:Key="ComboBoxButtonBorderThickness" Top="0" Bottom="0" Left="1" Right="0" />

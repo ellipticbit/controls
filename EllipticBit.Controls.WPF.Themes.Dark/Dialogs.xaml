@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+	<!-- Viewer -->
+	<SolidColorBrush x:Key="ViewerBackground" Color="#66EEEEEE" />
+
+	<!-- Dialog -->
+	<SolidColorBrush x:Key="DialogHeaderFooterBackground" Color="#FF333333" />
+	<SolidColorBrush x:Key="DialogContentBackground" Color="#FF111111" />
+	<SolidColorBrush x:Key="DialogBorder" Color="#FF535353" />
+
+</ResourceDictionary>

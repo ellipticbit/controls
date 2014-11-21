@@ -9,7 +9,7 @@
 	PreviewKeyUp="Dialog_PreviewKeyUp"
 	DataContext="{Binding RelativeSource={RelativeSource Self}}"
 	mc:Ignorable="d" MinWidth="500">
-	<Grid>
+	<Grid MaxHeight="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ebcd:Dialog}}, Path=MaxHeight}" MaxWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ebcd:Dialog}}, Path=MaxWidth}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="*"/>

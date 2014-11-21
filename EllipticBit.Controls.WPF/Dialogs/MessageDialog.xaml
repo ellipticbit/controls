@@ -10,10 +10,10 @@
 	FontSize="12pt"
 	DataContext="{Binding RelativeSource={RelativeSource Self}}"
 	mc:Ignorable="d" MinWidth="500">
-	<Grid>
+	<Grid >
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 		<Border Grid.Row="0" BorderThickness="0" BorderBrush="Transparent" Background="{DynamicResource DialogHeaderFooterBackground}" CornerRadius="2,2,0,0">

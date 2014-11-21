@@ -17,12 +17,18 @@ namespace EllipticBit.Controls.WPF.Dialogs
 {
 	public partial class DialogViewer : UserControl
 	{
-		public object ActiveDialog { get { return (object)GetValue(ActiveDialogProperty); } set { SetValue(ActiveDialogProperty, value); if (value == null) { Visibility = System.Windows.Visibility.Collapsed; } else { Visibility = System.Windows.Visibility.Visible; } } }
-		public static readonly DependencyProperty ActiveDialogProperty = DependencyProperty.Register("ActiveDialog", typeof(object), typeof(DialogViewer));
+		public Dialog ActiveDialog { get { return (Dialog)GetValue(ActiveDialogProperty); } set { SetValue(ActiveDialogProperty, value); if (value == null) { Visibility = System.Windows.Visibility.Collapsed; } else { Visibility = System.Windows.Visibility.Visible; } } }
+		public static readonly DependencyProperty ActiveDialogProperty = DependencyProperty.Register("ActiveDialog", typeof(Dialog), typeof(DialogViewer));
 
 		public DialogViewer()
 		{
 			InitializeComponent();
+		}
+
+		public void SetMaxSize(double Height, double Width)
+		{
+			ActiveDialog.MaxHeight = Height - 100;
+			ActiveDialog.MaxWidth = Width - 100;
 		}
 	}
 }

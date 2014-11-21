@@ -6,11 +6,11 @@
 			 DataContext="{Binding RelativeSource={RelativeSource Self}}"
 			 Visibility="Collapsed" MinWidth="500"
 			 mc:Ignorable="d" d:DesignHeight="900" d:DesignWidth="900">
-	<Border Background="{DynamicResource ViewerBackground}" IsHitTestVisible="True" >
+	<Border Background="{DynamicResource ViewerBackground}" IsHitTestVisible="True">
 		<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*" MinHeight="50" />
-				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="*" MinHeight="50" />
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
@@ -19,7 +19,7 @@
 				<ColumnDefinition Width="*" MinWidth="50" />
 			</Grid.ColumnDefinitions>
 			<Border Background="Transparent" Grid.Row="1" Grid.Column="1" >
-				<ContentPresenter Content="{Binding Path=ActiveDialog}" Margin="0" />
+				<ContentPresenter Content="{Binding Path=ActiveDialog}" Margin="0"/>
 			</Border>
 		</Grid>
 	</Border>

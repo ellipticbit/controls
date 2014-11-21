@@ -20,7 +20,7 @@
 			<TextBlock Text="{Binding Path=Caption}" Grid.Row="0" Margin="10" FontSize="20pt" />
 		</Border>
 		<Border Grid.Row="1" BorderThickness="0,1" BorderBrush="{DynamicResource DialogBorder}" Background="{DynamicResource DialogContentBackground}">
-			<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" CanContentScroll="True" Margin="0">
+			<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" CanContentScroll="False" Margin="0">
 				<ContentControl Content="{Binding Path=Message}" VerticalAlignment="Center" FontSize="14pt" Margin="50,25" />
 			</ScrollViewer>
 		</Border>

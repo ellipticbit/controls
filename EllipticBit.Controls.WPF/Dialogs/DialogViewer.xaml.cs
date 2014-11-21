@@ -18,7 +18,19 @@ namespace EllipticBit.Controls.WPF.Dialogs
 	public partial class DialogViewer : UserControl
 	{
 		public Dialog ActiveDialog { get { return (Dialog)GetValue(ActiveDialogProperty); } set { SetValue(ActiveDialogProperty, value); if (value == null) { Visibility = System.Windows.Visibility.Collapsed; } else { Visibility = System.Windows.Visibility.Visible; } } }
-		public static readonly DependencyProperty ActiveDialogProperty = DependencyProperty.Register("ActiveDialog", typeof(Dialog), typeof(DialogViewer));
+		public static readonly DependencyProperty ActiveDialogProperty = DependencyProperty.Register("ActiveDialog", typeof(Dialog), typeof(DialogViewer), new PropertyMetadata(ActiveDialogChangedCallback));
+
+		private static void ActiveDialogChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs e)
+		{
+			var de = o as DialogViewer;
+			if (de == null || de.ActiveDialog == null) return;
+			
+			de.ActiveDialog.MaxHeight = de.maxContentHeight;
+			de.ActiveDialog.MaxWidth = de.maxContentWidth;
+		}
+
+		private double maxContentHeight;
+		private double maxContentWidth;
 
 		public DialogViewer()
 		{
@@ -27,8 +39,11 @@ namespace EllipticBit.Controls.WPF.Dialogs
 
 		public void SetMaxSize(double Height, double Width)
 		{
-			ActiveDialog.MaxHeight = Height - 100;
-			ActiveDialog.MaxWidth = Width - 100;
+			maxContentHeight = Height - 100;
+			maxContentWidth = Width - 100;
+			if (ActiveDialog == null) return;
+			ActiveDialog.MaxHeight = maxContentHeight;
+			ActiveDialog.MaxWidth = maxContentWidth;
 		}
 	}
 }

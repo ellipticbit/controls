@@ -20,7 +20,9 @@
 			<TextBlock Text="{Binding Path=Caption}" Grid.Row="0" Margin="10" FontSize="20pt" />
 		</Border>
 		<Border Grid.Row="1" BorderThickness="0,1" BorderBrush="{DynamicResource DialogBorder}" Background="{DynamicResource DialogContentBackground}">
-			<ContentControl Content="{Binding Path=Message}" VerticalAlignment="Center" FontSize="14pt" Margin="50,25" />
+			<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" CanContentScroll="True" Margin="0">
+				<ContentControl Content="{Binding Path=Message}" VerticalAlignment="Center" FontSize="14pt" Margin="50,25" />
+			</ScrollViewer>
 		</Border>
 		<Border Grid.Row="2" BorderThickness="0" BorderBrush="Transparent" Background="{DynamicResource DialogHeaderFooterBackground}" CornerRadius="0,0,2,2">
 			<ItemsControl x:Name="MessageBoxButtons" ItemsSource="{Binding Path=Actions}" Grid.Row="2" Margin="10" HorizontalAlignment="Right">

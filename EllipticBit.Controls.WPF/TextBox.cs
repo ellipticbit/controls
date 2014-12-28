@@ -83,10 +83,8 @@ namespace EllipticBit.Controls.WPF
 
 	public class IntegerTextBox : TextBox
 	{
-		private bool isTextChanging = false;
-
 		public long Value { get { return (long)GetValue(ValueProperty); } set { SetValue(ValueProperty, value); } }
-		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(long), typeof(IntegerTextBox), new PropertyMetadata(0, ValueChangedCallback));
+		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(long), typeof(IntegerTextBox), new PropertyMetadata(0L, ValueChangedCallback));
 
 		private static void ValueChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs p)
 		{

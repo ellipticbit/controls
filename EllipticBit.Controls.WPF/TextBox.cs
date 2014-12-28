@@ -79,4 +79,14 @@ namespace EllipticBit.Controls.WPF
 		public ValidateEventArgs(RoutedEvent routedEvent) : base(routedEvent) { IsValid = true; }
 		public ValidateEventArgs(RoutedEvent routedEvent, object source) : base(routedEvent, source) { IsValid = true; }
 	}
+
+	public class IntegerTextBox : TextBox
+	{
+		protected override void OnPreviewTextInput(TextCompositionEventArgs e)
+		{
+			long result;
+			if (!long.TryParse(e.Text, out result))
+				e.Handled = true;
+		}
+	}
 }

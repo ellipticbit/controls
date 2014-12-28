@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Timers;
+using System.Windows.Controls;
 using System.Windows.Threading;
 
 namespace EllipticBit.Controls.WPF
@@ -82,11 +83,36 @@ namespace EllipticBit.Controls.WPF
 
 	public class IntegerTextBox : TextBox
 	{
+		private bool isTextChanging = false;
+
+		public long Value { get { return (long)GetValue(ValueProperty); } set { SetValue(ValueProperty, value); } }
+		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(long), typeof(IntegerTextBox), new PropertyMetadata(0, ValueChangedCallback));
+
+		private static void ValueChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs p)
+		{
+			var de = o as IntegerTextBox;
+			if (de == null) return;
+			var nt = (long)p.NewValue;
+			var ot = (long)p.OldValue;
+			if (nt == ot) return;
+
+			de.Text = nt.ToString();
+		}
+
 		protected override void OnPreviewTextInput(TextCompositionEventArgs e)
 		{
 			long result;
 			if (!long.TryParse(e.Text, out result))
 				e.Handled = true;
+		}
+
+		protected override void OnTextChanged(TextChangedEventArgs e)
+		{
+			base.OnTextChanged(e);
+
+			long result;
+			if (long.TryParse(Text, out result))
+				Value = result;
 		}
 	}
 }

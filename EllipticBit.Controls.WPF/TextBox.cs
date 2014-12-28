@@ -84,7 +84,7 @@ namespace EllipticBit.Controls.WPF
 	public class IntegerTextBox : TextBox
 	{
 		public long Value { get { return (long)GetValue(ValueProperty); } set { SetValue(ValueProperty, value); } }
-		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(long), typeof(IntegerTextBox), new PropertyMetadata(0L, ValueChangedCallback));
+		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(long), typeof(IntegerTextBox), new FrameworkPropertyMetadata(0L, FrameworkPropertyMetadataOptions.Journal | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, ValueChangedCallback, null, true, UpdateSourceTrigger.PropertyChanged));
 
 		private static void ValueChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs p)
 		{
@@ -106,28 +106,28 @@ namespace EllipticBit.Controls.WPF
 
 		protected override void OnTextChanged(TextChangedEventArgs e)
 		{
-			base.OnTextChanged(e);
-
 			long result;
 			if (long.TryParse(Text, out result))
 				Value = result;
+
+			base.OnTextChanged(e);
 		}
 	}
 
 	public class TimeSpanTextBox : TextBox
 	{
 		public TimeSpan Value { get { return (TimeSpan)GetValue(ValueProperty); } set { SetValue(ValueProperty, value); } }
-		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(TimeSpan), typeof(TimeSpanTextBox), new PropertyMetadata(new TimeSpan(0), ValueChangedCallback));
+		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(TimeSpan), typeof(TimeSpanTextBox), new FrameworkPropertyMetadata(new TimeSpan(0), FrameworkPropertyMetadataOptions.Journal | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, ValueChangedCallback, null, true, UpdateSourceTrigger.PropertyChanged));
 
 		private static void ValueChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs p)
 		{
-			var de = o as IntegerTextBox;
+			var de = o as TimeSpanTextBox;
 			if (de == null) return;
 			var nt = (TimeSpan)p.NewValue;
 			var ot = (TimeSpan)p.OldValue;
 			if (nt.Equals(ot)) return;
 
-			de.Text = nt.ToString("d:hh:mm:ss");
+			de.Text = nt.ToString("g");
 		}
 
 		protected override void OnPreviewTextInput(TextCompositionEventArgs e)
@@ -139,11 +139,11 @@ namespace EllipticBit.Controls.WPF
 
 		protected override void OnTextChanged(TextChangedEventArgs e)
 		{
-			base.OnTextChanged(e);
-
 			TimeSpan result;
-			if (!TimeSpan.TryParse(Text, out result))
+			if (TimeSpan.TryParse(Text, out result))
 				Value = result;
+
+			base.OnTextChanged(e);
 		}
 	}
 }

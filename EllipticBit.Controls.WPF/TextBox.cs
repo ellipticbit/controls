@@ -113,4 +113,37 @@ namespace EllipticBit.Controls.WPF
 				Value = result;
 		}
 	}
+
+	public class TimeSpanTextBox : TextBox
+	{
+		public TimeSpan Value { get { return (TimeSpan)GetValue(ValueProperty); } set { SetValue(ValueProperty, value); } }
+		public static readonly DependencyProperty ValueProperty = DependencyProperty.Register("Value", typeof(TimeSpan), typeof(TimeSpanTextBox), new PropertyMetadata(new TimeSpan(0), ValueChangedCallback));
+
+		private static void ValueChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs p)
+		{
+			var de = o as IntegerTextBox;
+			if (de == null) return;
+			var nt = (TimeSpan)p.NewValue;
+			var ot = (TimeSpan)p.OldValue;
+			if (nt.Equals(ot)) return;
+
+			de.Text = nt.ToString("d:hh:mm:ss");
+		}
+
+		protected override void OnPreviewTextInput(TextCompositionEventArgs e)
+		{
+			TimeSpan result;
+			if (!TimeSpan.TryParse(e.Text, out result))
+				e.Handled = true;
+		}
+
+		protected override void OnTextChanged(TextChangedEventArgs e)
+		{
+			base.OnTextChanged(e);
+
+			TimeSpan result;
+			if (!TimeSpan.TryParse(Text, out result))
+				Value = result;
+		}
+	}
 }

@@ -12,7 +12,7 @@
 
 	<Style x:Key="MainWindowStyle" TargetType="{x:Type Window}" >
 		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontSize" Value="10pt" />
+		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
 		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
 		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
 		<Setter Property="Background" Value="{StaticResource WindowBackground}" />
@@ -25,7 +25,7 @@
 		<Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
 		<Setter Property="WindowState" Value="Maximized" />
 	</Style>
-	
+
 	<Style x:Key="WindowControlButtonStyle" TargetType="{x:Type Button}">
 		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
 		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />

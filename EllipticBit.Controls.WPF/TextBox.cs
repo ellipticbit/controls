@@ -28,7 +28,7 @@ namespace EllipticBit.Controls.WPF
 		public static readonly DependencyProperty LabelTextColorProperty = DependencyProperty.Register("LabelTextColor", typeof(Brush), typeof(TextBox));
 
 		public bool IsRequired { get { return (bool)GetValue(IsRequiredProperty); } set { SetValue(IsRequiredProperty, value); } }
-		public static readonly DependencyProperty IsRequiredProperty = DependencyProperty.Register("IsRequired", typeof(bool), typeof(TextBox));
+		public static readonly DependencyProperty IsRequiredProperty = DependencyProperty.Register("IsRequired", typeof(bool), typeof(TextBox), new PropertyMetadata(false));
 
 		public bool IsInvalid { get { return (bool)GetValue(IsInvalidProperty); } private set { SetValue(IsInvalidPropertyKey, value); } }
 		internal static readonly DependencyPropertyKey IsInvalidPropertyKey = DependencyProperty.RegisterReadOnly("IsInvalid", typeof(bool), typeof(TextBox), new PropertyMetadata(false));

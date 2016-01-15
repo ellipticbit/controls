@@ -51,7 +51,9 @@
 						<TextBlock Text="Sub Tab One" />
 					</ebc:TabGroupItem.Header>
 					<Grid>
-						<Label Content="Tab One Content" />
+						<ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
+							<Label Content="Tab One Content - SDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD" />
+						</ScrollViewer>
 					</Grid>
 				</ebc:TabGroupItem>
 				<ebc:TabGroupItem>

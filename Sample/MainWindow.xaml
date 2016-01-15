@@ -62,6 +62,9 @@
 					</ebc:TabGroupItem.Header>
 					<Grid>
 						<Label Content="Tab Two Content" />
+						<ListBox Width="100" HorizontalAlignment="Right">
+							<ListBox>AAAAAAAAAAAAAAAAAA</ListBox>
+						</ListBox>
 					</Grid>
 				</ebc:TabGroupItem>
 			</ebc:TabGroup>

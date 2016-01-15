@@ -65,7 +65,7 @@ namespace EllipticBit.Controls.WPF
 		{
 			base.OnTextChanged(e);
 
-			HasText = (Text != "");
+			HasText = !string.IsNullOrEmpty(Text);
 
 			OnValidate();
 		}

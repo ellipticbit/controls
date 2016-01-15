@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:ebc="http://schemas.ellipticbit.com/controls">
 
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Defaults.xaml"/>
@@ -47,6 +48,96 @@
 							</MultiTrigger.Conditions>
 							<MultiTrigger.Setters>
 								<Setter TargetName="FocusedOverlay" Property="Visibility" Value="Visible"/>
+							</MultiTrigger.Setters>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="VerticalScrollBarVisibility" Value="Auto"/>
+								<Condition Property="AcceptsReturn" Value="True"/>
+							</MultiTrigger.Conditions>
+							<MultiTrigger.Setters>
+								<Setter Property="VerticalContentAlignment" Value="Top" />
+								<Setter Property="Padding" Value="{StaticResource MultilineTextboxPadding}" />
+								<Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+							</MultiTrigger.Setters>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="VerticalScrollBarVisibility" Value="Visible"/>
+								<Condition Property="AcceptsReturn" Value="True"/>
+							</MultiTrigger.Conditions>
+							<MultiTrigger.Setters>
+								<Setter Property="VerticalContentAlignment" Value="Top" />
+								<Setter Property="Padding" Value="{StaticResource MultilineTextboxPadding}" />
+								<Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+							</MultiTrigger.Setters>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style x:Key="{x:Type ebc:TextBox}" TargetType="{x:Type ebc:TextBox}">
+		<Setter Property="CaretBrush" Value="{StaticResource DefaultFontColor}" />
+		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+		<Setter Property="LabelTextColor" Value="{StaticResource DisabledFontColor}" />
+		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+		<Setter Property="SelectionBrush" Value="{StaticResource DefaultSelectionColor}" />
+		<Setter Property="Background" Value="{StaticResource FieldBackgroundColor}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource FieldBorderColor}"/>
+		<Setter Property="BorderThickness" Value="{StaticResource FieldBorderThickness}" />
+		<Setter Property="Padding" Value="{StaticResource FieldPadding}" />
+		<Setter Property="UseLayoutRounding" Value="true"/>
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="MinHeight" Value="30" />
+		<Setter Property="AllowDrop" Value="true"/>
+		<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+		<Setter Property="VerticalContentAlignment" Value="Center" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ebc:TextBox}">
+					<Grid>
+						<Border Margin="{StaticResource FieldBorderMargin}" Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{StaticResource FieldCornerRadius}" >
+							<ScrollViewer Margin="{TemplateBinding Padding}" Padding="0" x:Name="PART_ContentHost" UseLayoutRounding="True" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" />
+						</Border>
+						<Border x:Name="FocusedOverlay" Visibility="Collapsed" BorderBrush="{StaticResource FieldSelectedBorderOverlayColor}" BorderThickness="{StaticResource FieldSelectedBorderOverlayThickness}" CornerRadius="{StaticResource FieldCornerRadius}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter TargetName="Border" Property="Background" Value="{StaticResource FieldDisabledColor}"/>
+							<Setter Property="BorderBrush" Value="{StaticResource FieldDisabledBorderColor}"/>
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsKeyboardFocused" Value="True"/>
+								<Condition Property="IsEnabled" Value="True"/>
+							</MultiTrigger.Conditions>
+							<MultiTrigger.Setters>
+								<Setter TargetName="FocusedOverlay" Property="Visibility" Value="Visible"/>
+							</MultiTrigger.Setters>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="HasText" Value="False"/>
+								<Condition Property="IsInvalid" Value="True"/>
+							</MultiTrigger.Conditions>
+							<MultiTrigger.Setters>
+								<Setter TargetName="Border" Property="Background" Value="{StaticResource FieldRequiredInvalidColor}"/>
+							</MultiTrigger.Setters>
+						</MultiTrigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsRequired" Value="True"/>
+								<Condition Property="HasText" Value="False"/>
+								<Condition Property="IsInvalid" Value="False"/>
+							</MultiTrigger.Conditions>
+							<MultiTrigger.Setters>
+								<Setter TargetName="Border" Property="Background" Value="{StaticResource FieldRequiredBackgroundColor}"/>
 							</MultiTrigger.Setters>
 						</MultiTrigger>
 						<MultiTrigger>

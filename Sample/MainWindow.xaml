@@ -78,6 +78,7 @@
 					</ebc:TabGroupItem.Header>
 					<Grid>
 						<Label Content="Tab One Content" />
+						<ebc:TextBox VerticalAlignment="Center" Width="100" Height="100" />
 					</Grid>
 				</ebc:TabGroupItem>
 				<ebc:TabGroupItem>

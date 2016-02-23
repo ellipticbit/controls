@@ -26,8 +26,8 @@
 	</Style>
 
 	<Style x:Key="{x:Type Label}" TargetType="{x:Type Label}" >
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<!--<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+		<!--<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
 		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
 		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />-->
 		<Setter Property="Background" Value="Transparent" />

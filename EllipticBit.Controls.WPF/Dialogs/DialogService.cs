@@ -79,16 +79,9 @@ namespace EllipticBit.Controls.WPF.Dialogs
 
 		public static void ShowContentDialog(object Module, string Caption, IDialogContent Content)
 		{
-			Messages.Enqueue(new ContentDialog(Module, Caption, Content, null));
+			Messages.Enqueue(new ContentDialog(Module, Caption, Content));
 			ProcessNextMessage();
 		}
-
-		public static void ShowContentDialog(object Module, string Caption, IDialogContent Content, params DialogAction[] Actions)
-		{
-			Messages.Enqueue(new ContentDialog(Module, Caption, Content, Actions));
-			ProcessNextMessage();
-		}
-
 	}
 
 	public abstract class Dialog : System.Windows.Controls.ContentControl

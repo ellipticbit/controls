@@ -35,18 +35,16 @@ namespace EllipticBit.Controls.WPF.Dialogs
 			InitializeComponent();
 		}
 
-		public ContentDialog(object Module, string Caption, IDialogContent Message, DialogAction[] Actions)
+		public ContentDialog(object Module, string Caption, IDialogContent Message)
 		{
-			this.Module = Module == null ? DialogService.DefaultModuleTitle : Module.ToString();
+			this.Module = Module?.ToString() ?? DialogService.DefaultModuleTitle;
 			this.Caption = Caption;
 			this.Message = Message;
 			content = Message;
-			if(Actions != null)
-				this.Actions = new ObservableCollection<DialogAction>(Actions);
 
 			InitializeComponent();
 
-			Message.Actions = this.Actions;
+			Actions = Message.Actions ?? new ObservableCollection<DialogAction>();
 			Message.Host = this;
 		}
 
@@ -66,7 +64,7 @@ namespace EllipticBit.Controls.WPF.Dialogs
 				}
 		}
 
-		public async override void SetFocus()
+		public override async void SetFocus()
 		{
 			await Dispatcher.InvokeAsync(() => content.SetFocus(), DispatcherPriority.ApplicationIdle);
 		}
@@ -75,7 +73,7 @@ namespace EllipticBit.Controls.WPF.Dialogs
 	public interface IDialogContent
 	{
 		ContentDialog Host { get; set; }
-		ObservableCollection<DialogAction> Actions { get; set; }
+		ObservableCollection<DialogAction> Actions { get; }
 		void SetFocus();
 	}
 }

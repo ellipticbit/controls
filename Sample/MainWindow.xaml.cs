@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EllipticBit.Controls.WPF.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace Sample
 		public MainWindow()
 		{
 			InitializeComponent();
+			DialogService.Initialize("Test", Dialogs);
+		}
+
+		private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+		{
+			DialogService.ShowMessageDialog(null, "Hello", "BLAM!");
+		}
+
+		private void MainWindow_OnSizeChanged(object sender, SizeChangedEventArgs e)
+		{
+			Dialogs.SetMaxSize(ActualHeight, ActualWidth);
 		}
 	}
 }

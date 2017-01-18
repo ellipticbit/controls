@@ -1,12 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26020.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{945825DB-72D2-4701-999D-7F244D53D77E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows Runtime", "Windows Runtime", "{AE083759-A81C-4BBF-B9DE-24784716BEED}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllipticBit.Controls.WPF", "EllipticBit.Controls.WPF\EllipticBit.Controls.WPF.csproj", "{9DF66A92-56D8-4DE9-87D6-3878F46B22FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllipticBit.Controls.WPF.Themes.Light", "EllipticBit.Controls.WPF.Themes.Light\EllipticBit.Controls.WPF.Themes.Light.csproj", "{3436CA19-55A1-4297-9FE3-4B109F013B33}"
@@ -40,11 +36,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{9DF66A92-56D8-4DE9-87D6-3878F46B22FA} = {945825DB-72D2-4701-999D-7F244D53D77E}
-		{3436CA19-55A1-4297-9FE3-4B109F013B33} = {945825DB-72D2-4701-999D-7F244D53D77E}
-		{6AB172B8-B91F-4DFE-A1E1-714F489C5396} = {945825DB-72D2-4701-999D-7F244D53D77E}
-		{73487EF0-0F67-4487-81F0-E07A5E412AD5} = {945825DB-72D2-4701-999D-7F244D53D77E}
 	EndGlobalSection
 EndGlobal

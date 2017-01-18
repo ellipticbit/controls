@@ -3,7 +3,7 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 StartupUri="MainWindow.xaml">
 	<Application.Resources>
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Theme.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Dark;component/Theme.xaml" />
 		<!--<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 			</ResourceDictionary.MergedDictionaries>

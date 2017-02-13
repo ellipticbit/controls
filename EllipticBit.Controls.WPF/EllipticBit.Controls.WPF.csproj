@@ -47,15 +47,11 @@
     <Compile Include="ButtonGroupPanel.cs" />
     <Compile Include="Buttons.cs" />
     <Compile Include="ComboBoxes.cs" />
-    <Compile Include="Dialogs\ContentDialog.xaml.cs">
-      <DependentUpon>ContentDialog.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Dialogs\Dialog.cs" />
+    <Compile Include="Dialogs\DialogAction.cs" />
     <Compile Include="Dialogs\DialogService.cs" />
     <Compile Include="Dialogs\DialogViewer.xaml.cs">
       <DependentUpon>DialogViewer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\MessageDialog.xaml.cs">
-      <DependentUpon>MessageDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="DragAdorner.cs" />
     <Compile Include="Extensions\Converters.cs" />
@@ -67,15 +63,7 @@
     <Compile Include="TreeViewHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Dialogs\ContentDialog.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Dialogs\DialogViewer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dialogs\MessageDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

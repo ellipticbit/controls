@@ -1039,7 +1039,7 @@
 		</Setter>
 	</Style>
 
-	<Style x:Key="{x:Type ec:DialogAction}" TargetType="{x:Type ec:DialogAction}">
+	<Style x:Key="{x:Type ec:DialogActionBase}" TargetType="{x:Type ec:DialogActionBase}">
 		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
 		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
 		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
@@ -1054,7 +1054,7 @@
 		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:DialogAction}">
+				<ControlTemplate TargetType="{x:Type ec:DialogActionBase}">
 					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
 						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
 					</Border>

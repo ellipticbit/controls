@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Concurrent;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace EllipticBit.Controls.WPF.Dialogs
 {
@@ -13,36 +7,25 @@ namespace EllipticBit.Controls.WPF.Dialogs
 	{
 		private static bool IsProcessingMessage { get; set; }
 
-		public static ConcurrentQueue<Dialog> Messages { get; private set; }
-		public static DialogViewer Viewer { get; private set; }
-		internal static string DefaultModuleTitle { get; private set; }
+		private static ConcurrentQueue<DialogBase> Messages { get; }
+		private static DialogViewer Viewer { get; set; }
 
 		static DialogService()
 		{
-			Messages = new ConcurrentQueue<Dialog>();
-			DefaultModuleTitle = "";
+			Messages = new ConcurrentQueue<DialogBase>();
 		}
 
-		public static void Initialize(string DefaultModuleTitle, DialogViewer Viewer)
+		public static void Initialize(DialogViewer Viewer)
 		{
-			DialogService.DefaultModuleTitle = DefaultModuleTitle;
 			DialogService.Viewer = Viewer;
 		}
 
-		internal static async void ProcessNextMessage()
-		{
-			if (Application.Current.Dispatcher.CheckAccess())
-				InternalProcessNextMessage();
-			else
-				await Application.Current.Dispatcher.InvokeAsync(InternalProcessNextMessage, System.Windows.Threading.DispatcherPriority.Normal);
-		}
-
-		private static void InternalProcessNextMessage()
+		private static void ProcessNextMessage()
 		{
 			if (IsProcessingMessage) return;
 			IsProcessingMessage = true;
 
-			Dialog next = null;
+			DialogBase next = null;
 			if (Messages.TryDequeue(out next) == false)
 			{
 				IsProcessingMessage = false;
@@ -54,89 +37,46 @@ namespace EllipticBit.Controls.WPF.Dialogs
 			{
 				Viewer.ActiveDialog = next;
 				next.Focus();
-				next.SetFocus();
 			}
 		}
 
-		public static void CloseActiveMessageBox()
+		internal static void CloseActiveMessageBox()
 		{
 			IsProcessingMessage = false;
 
 			ProcessNextMessage();
 		}
 
-		public static void ShowMessageDialog(object Module, string Caption, string Message)
+		public static void ShowMessageDialog(string title, string message)
 		{
-			Messages.Enqueue(new MessageDialog(Module, Caption, Message, new[] { new DialogAction("OK", true, true) }));
+			Messages.Enqueue(new MessageDialog<bool>(title, message, new[] { new DialogAction<bool>("OK", null, true, true) }));
 			ProcessNextMessage();
 		}
 
-		public static void ShowMessageDialog(object Module, string Caption, string Message, params DialogAction[] Actions)
+		public static Task<T> ShowMessageDialog<T>(string title, string message, params DialogAction<T>[] actions)
 		{
-			Messages.Enqueue(new MessageDialog(Module, Caption, Message, Actions));
+			var dialog = new MessageDialog<T>(title, message, actions);
+
+			var tsc = new TaskCompletionSource<T>();
+			foreach (var da in dialog.Actions)
+				da.Completion = tsc;
+
+			Messages.Enqueue(dialog);
 			ProcessNextMessage();
+
+			return tsc.Task;
 		}
 
-		public static void ShowContentDialog(object Module, string Caption, IDialogContent Content)
+		public static Task<T> ShowContentDialog<T>(Dialog<T> dialog)
 		{
-			Messages.Enqueue(new ContentDialog(Module, Caption, Content));
+			var tsc = new TaskCompletionSource<T>();
+			foreach (var da in dialog.Actions)
+				da.Completion = tsc;
+
+			Messages.Enqueue(dialog);
 			ProcessNextMessage();
-		}
-	}
 
-	public abstract class Dialog : System.Windows.Controls.ContentControl
-	{
-		//Dialog Properties
-		public string Module { get { return (string)GetValue(ModuleProperty); } set { SetValue(ModuleProperty, value); } }
-		public static readonly DependencyProperty ModuleProperty = DependencyProperty.Register("Module", typeof(string), typeof(Dialog));
-
-		public string Caption { get { return (string)GetValue(CaptionProperty); } set { SetValue(CaptionProperty, value); } }
-		public static readonly DependencyProperty CaptionProperty = DependencyProperty.Register("Caption", typeof(string), typeof(Dialog));
-
-		public ObservableCollection<DialogAction> Actions { get { return (ObservableCollection<DialogAction>)GetValue(ActionsProperty); } set { SetValue(ActionsProperty, value); } }
-		public static readonly DependencyProperty ActionsProperty = DependencyProperty.Register("Actions", typeof(ObservableCollection<DialogAction>), typeof(Dialog));
-
-		public abstract void SetFocus();
-	}
-
-	public class DialogAction : System.Windows.Controls.Button
-	{
-		public Action Action { get; private set; }
-		public bool DoNotClose { get; private set; }
-
-		public DialogAction(string Title, bool IsDefault = false, bool IsCancel = false, bool DoNotClose = false)
-		{
-			Content = Title ?? DialogService.DefaultModuleTitle;
-			this.IsDefault = IsDefault;
-			this.IsCancel = IsCancel;
-			this.DoNotClose = DoNotClose;
-			Action = null;
-			DataContext = this;
-		}
-
-		public DialogAction(string Title, Action Action, bool IsDefault = false, bool IsCancel = false, bool DoNotClose = false)
-		{
-			Content = Title ?? DialogService.DefaultModuleTitle;
-			this.IsDefault = IsDefault;
-			this.IsCancel = IsCancel;
-			this.DoNotClose = DoNotClose;
-			this.Action = Action;
-			DataContext = this;
-		}
-
-		protected override void OnClick()
-		{
-			base.OnClick();
-
-			PerformClick();
-		}
-
-		internal void PerformClick()
-		{
-			if (Action != null) Action();
-
-			if (!DoNotClose)
-				DialogService.CloseActiveMessageBox();
+			return tsc.Task;
 		}
 	}
 }

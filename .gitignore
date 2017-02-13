@@ -9,9 +9,9 @@ Botan_*32*
 Botan_*64*
 *.sln.ide
 *.bak
+.vs/
 
 # Build results
-
 [Dd]ebug/
 [Rr]elease/
 x64/

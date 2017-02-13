@@ -5,20 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace EllipticBit.Controls.WPF.Dialogs
 {
-	public partial class DialogViewer : UserControl
+	public partial class DialogViewer : Grid
 	{
-		public Dialog ActiveDialog { get { return (Dialog)GetValue(ActiveDialogProperty); } set { SetValue(ActiveDialogProperty, value); if (value == null) { Visibility = System.Windows.Visibility.Collapsed; } else { Visibility = System.Windows.Visibility.Visible; } } }
-		public static readonly DependencyProperty ActiveDialogProperty = DependencyProperty.Register("ActiveDialog", typeof(Dialog), typeof(DialogViewer), new PropertyMetadata(ActiveDialogChangedCallback));
+		public DialogBase ActiveDialog { get { return (DialogBase)GetValue(ActiveDialogProperty); } set { SetValue(ActiveDialogProperty, value); if (value == null) { Visibility = System.Windows.Visibility.Collapsed; } else { Visibility = System.Windows.Visibility.Visible; } } }
+		public static readonly DependencyProperty ActiveDialogProperty = DependencyProperty.Register("ActiveDialog", typeof(DialogBase), typeof(DialogViewer), new PropertyMetadata(ActiveDialogChangedCallback));
 
 		private static void ActiveDialogChangedCallback(DependencyObject o, DependencyPropertyChangedEventArgs e)
 		{
@@ -37,13 +31,21 @@ namespace EllipticBit.Controls.WPF.Dialogs
 			InitializeComponent();
 		}
 
-		public void SetMaxSize(double Height, double Width)
+		private void DialogViewer_OnSizeChanged(object sender, SizeChangedEventArgs e)
 		{
-			maxContentHeight = Height - 100;
-			maxContentWidth = Width - 100;
+			maxContentHeight = e.NewSize.Height - 100;
+			maxContentWidth = e.NewSize.Width - 100;
 			if (ActiveDialog == null) return;
 			ActiveDialog.MaxHeight = maxContentHeight;
 			ActiveDialog.MaxWidth = maxContentWidth;
+		}
+
+		private async void DialogViewer_OnPreviewKeyUp(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.Escape)
+				await ActiveDialog.DoCancelAction().ConfigureAwait(true);
+			if (e.Key == Key.Enter)
+				await ActiveDialog.DoDefaultAction().ConfigureAwait(true);
 		}
 	}
 }

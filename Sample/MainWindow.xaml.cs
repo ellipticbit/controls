@@ -24,17 +24,17 @@ namespace Sample
 		public MainWindow()
 		{
 			InitializeComponent();
-			DialogService.Initialize("Test", Dialogs);
+			DialogService.Initialize(Dialogs);
 		}
 
 		private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
 		{
-			DialogService.ShowMessageDialog(null, "Hello", "BLAM!");
+			DialogService.ShowMessageDialog("Hello", "BLAM!");
 		}
 
-		private void MainWindow_OnSizeChanged(object sender, SizeChangedEventArgs e)
+		private async void AsyncButtonBase_OnClick(object sender, RoutedEventArgs e)
 		{
-			Dialogs.SetMaxSize(ActualHeight, ActualWidth);
+			await DialogService.ShowMessageDialog<bool>("Hello", "BLAM!", new DialogAction<bool>("Async!", async () => { await Task.Delay(500); return true; }));
 		}
 	}
 }

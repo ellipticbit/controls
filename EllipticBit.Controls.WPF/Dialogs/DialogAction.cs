@@ -11,8 +11,9 @@ namespace EllipticBit.Controls.WPF.Dialogs
 		public Func<Task<T>> Action { get; private set; }
 		internal TaskCompletionSource<T> Completion { get; set; }
 
-		protected DialogAction(string title, bool isDefault = false, bool isCancel = false)
+		public DialogAction(string title, bool isDefault = false, bool isCancel = false)
 		{
+			Action = null;
 			Content = title;
 			this.IsDefault = isDefault;
 			this.IsCancel = isCancel;

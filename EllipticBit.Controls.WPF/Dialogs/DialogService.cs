@@ -36,7 +36,6 @@ namespace EllipticBit.Controls.WPF.Dialogs
 			if (next != null)
 			{
 				Viewer.ActiveDialog = next;
-				next.Focus();
 			}
 		}
 

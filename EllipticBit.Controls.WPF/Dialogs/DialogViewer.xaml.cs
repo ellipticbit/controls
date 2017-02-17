@@ -19,8 +19,8 @@ namespace EllipticBit.Controls.WPF.Dialogs
 			var de = o as DialogViewer;
 			if (de == null || de.ActiveDialog == null) return;
 			
-			de.ActiveDialog.MaxHeight = de.maxContentHeight;
-			de.ActiveDialog.MaxWidth = de.maxContentWidth;
+			de.ContentBorder.MaxHeight = de.maxContentHeight;
+			de.ContentBorder.MaxWidth = de.maxContentWidth;
 		}
 
 		private double maxContentHeight;
@@ -36,8 +36,8 @@ namespace EllipticBit.Controls.WPF.Dialogs
 			maxContentHeight = e.NewSize.Height - 100;
 			maxContentWidth = e.NewSize.Width - 100;
 			if (ActiveDialog == null) return;
-			ActiveDialog.MaxHeight = maxContentHeight;
-			ActiveDialog.MaxWidth = maxContentWidth;
+			ContentBorder.MaxHeight = maxContentHeight;
+			ContentBorder.MaxWidth = maxContentWidth;
 		}
 
 		private async void DialogViewer_OnPreviewKeyUp(object sender, KeyEventArgs e)

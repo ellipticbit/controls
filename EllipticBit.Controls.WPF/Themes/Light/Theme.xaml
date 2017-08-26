@@ -1,14 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Basic.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/TextBoxes.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/GroupBoxes.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Navigation.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Window.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Buttons.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/TabGroup.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Dialogs.xaml" />
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Defaults.xaml" />
-	</ResourceDictionary.MergedDictionaries>
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/Defaults.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/TextBoxes.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/GroupBoxes.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/Navigation.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/Window.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/Buttons.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/TabGroup.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/Dialogs.xaml" />
+    </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

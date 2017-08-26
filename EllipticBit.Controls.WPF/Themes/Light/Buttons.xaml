@@ -1,1128 +1,1129 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					xmlns:ec="http://schemas.ellipticbit.com/controls">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ebcd="clr-namespace:EllipticBit.Controls.WPF.Dialogs"
+                    xmlns:ebc="clr-namespace:EllipticBit.Controls.WPF">
 
-	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF.Themes.Light;component/Defaults.xaml"/>
-	</ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/EllipticBit.Controls.WPF;component/Themes/Light/Defaults.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
 
-	<!-- Groups -->
-	<CornerRadius x:Key="ButtonGroupCornerRadiusSingle" BottomLeft="3" BottomRight="3" TopLeft="3" TopRight="3" />
-	<CornerRadius x:Key="ButtonGroupCornerRadiusMiddle" BottomLeft="0" BottomRight="0" TopLeft="0" TopRight="0" />
-	<CornerRadius x:Key="ButtonGroupCornerRadiusLeft" BottomLeft="3" BottomRight="0" TopLeft="3" TopRight="0" />
-	<CornerRadius x:Key="ButtonGroupCornerRadiusRight" BottomLeft="0" BottomRight="3" TopLeft="0" TopRight="3" />
-	<CornerRadius x:Key="ButtonGroupCornerRadiusTop" BottomLeft="0" BottomRight="0" TopLeft="3" TopRight="3" />
-	<CornerRadius x:Key="ButtonGroupCornerRadiusBottom" BottomLeft="3" BottomRight="3" TopLeft="0" TopRight="0" />
-	<Thickness x:Key="ButtonGroupBorderThicknessVerticalTop" Top="1" Bottom="1" Left="1" Right="1" />
-	<Thickness x:Key="ButtonGroupBorderThicknessVertical" Top="0" Bottom="1" Left="1" Right="1" />
-	<Thickness x:Key="ButtonGroupBorderThicknessHorizontalLeft" Top="1" Bottom="1" Left="1" Right="1" />
-	<Thickness x:Key="ButtonGroupBorderThicknessHorizontal" Top="1" Bottom="1" Left="0" Right="1" />
+    <!-- Groups -->
+    <CornerRadius x:Key="ButtonGroupCornerRadiusSingle" BottomLeft="3" BottomRight="3" TopLeft="3" TopRight="3" />
+    <CornerRadius x:Key="ButtonGroupCornerRadiusMiddle" BottomLeft="0" BottomRight="0" TopLeft="0" TopRight="0" />
+    <CornerRadius x:Key="ButtonGroupCornerRadiusLeft" BottomLeft="3" BottomRight="0" TopLeft="3" TopRight="0" />
+    <CornerRadius x:Key="ButtonGroupCornerRadiusRight" BottomLeft="0" BottomRight="3" TopLeft="0" TopRight="3" />
+    <CornerRadius x:Key="ButtonGroupCornerRadiusTop" BottomLeft="0" BottomRight="0" TopLeft="3" TopRight="3" />
+    <CornerRadius x:Key="ButtonGroupCornerRadiusBottom" BottomLeft="3" BottomRight="3" TopLeft="0" TopRight="0" />
+    <Thickness x:Key="ButtonGroupBorderThicknessVerticalTop" Top="1" Bottom="1" Left="1" Right="1" />
+    <Thickness x:Key="ButtonGroupBorderThicknessVertical" Top="0" Bottom="1" Left="1" Right="1" />
+    <Thickness x:Key="ButtonGroupBorderThicknessHorizontalLeft" Top="1" Bottom="1" Left="1" Right="1" />
+    <Thickness x:Key="ButtonGroupBorderThicknessHorizontal" Top="1" Bottom="1" Left="0" Right="1" />
 
-	<!-- Standard Button -->
-	<SolidColorBrush x:Key="ButtonBorderColor" Color="#FFCCCCCC" />
-	<LinearGradientBrush x:Key="ButtonBackgroundColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFFFFFFF" Offset="0" />
-		<GradientStop Color="#FFF2F2F2" Offset="1" />
-	</LinearGradientBrush>
-	<SolidColorBrush x:Key="ButtonMouseOverBorderColor" Color="#FF999999" />
-	<LinearGradientBrush x:Key="ButtonMouseOverColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFFFFFFF" Offset="0" />
-		<GradientStop Color="#FFF7F7F7" Offset="1" />
-	</LinearGradientBrush>
-	<SolidColorBrush x:Key="ButtonPressedBorderColor" Color="#FF7F7F7F" />
-	<LinearGradientBrush x:Key="ButtonPressedColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFE5E5E5" Offset="0" />
-		<GradientStop Color="#FFD8D8D8" Offset="1" />
-	</LinearGradientBrush>
-	<SolidColorBrush x:Key="ButtonDisabledBorderColor" Color="#FF7F7F7F" />
-	<LinearGradientBrush x:Key="ButtonDisabledColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFE5E5E5" Offset="0" />
-		<GradientStop Color="#FFD8D8D8" Offset="1" />
-	</LinearGradientBrush>
+    <!-- Standard Button -->
+    <SolidColorBrush x:Key="ButtonBorderColor" Color="#FFCCCCCC" />
+    <LinearGradientBrush x:Key="ButtonBackgroundColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFFFFFFF" Offset="0" />
+        <GradientStop Color="#FFF2F2F2" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ButtonMouseOverBorderColor" Color="#FF999999" />
+    <LinearGradientBrush x:Key="ButtonMouseOverColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFFFFFFF" Offset="0" />
+        <GradientStop Color="#FFF7F7F7" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ButtonPressedBorderColor" Color="#FF7F7F7F" />
+    <LinearGradientBrush x:Key="ButtonPressedColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFE5E5E5" Offset="0" />
+        <GradientStop Color="#FFD8D8D8" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ButtonDisabledBorderColor" Color="#FF7F7F7F" />
+    <LinearGradientBrush x:Key="ButtonDisabledColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFE5E5E5" Offset="0" />
+        <GradientStop Color="#FFD8D8D8" Offset="1" />
+    </LinearGradientBrush>
 
-	<!-- Primary Button -->
-	<SolidColorBrush x:Key="PrimaryButtonBorderColor" Color="#FF486582" />
-	<LinearGradientBrush x:Key="PrimaryButtonBackgroundColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FF4687CE" Offset="0" />
-		<GradientStop Color="#FF3068A2" Offset="1" />
-	</LinearGradientBrush>
-	<SolidColorBrush x:Key="PrimaryButtonMouseOverBorderColor" Color="#FF205081" />
-	<LinearGradientBrush x:Key="PrimaryButtonMouseOverColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FF5A94D3" Offset="0" />
-		<GradientStop Color="#FF3673B5" Offset="1" />
-	</LinearGradientBrush>
-	<SolidColorBrush x:Key="PrimaryButtonPressedBorderColor" Color="#FF063667" />
-	<LinearGradientBrush x:Key="PrimaryButtonPressedColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FF407AB9" Offset="0" />
-		<GradientStop Color="#FF1C599B" Offset="1" />
-	</LinearGradientBrush>
-	<SolidColorBrush x:Key="PrimaryButtonDisabledBorderColor" Color="#FF7F9CB9" />
-	<LinearGradientBrush x:Key="PrimaryButtonDisabledColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFA2C3E6" Offset="0" />
-		<GradientStop Color="#FF97B3D0" Offset="1" />
-	</LinearGradientBrush>
+    <!-- Primary Button -->
+    <SolidColorBrush x:Key="PrimaryButtonBorderColor" Color="#FF486582" />
+    <LinearGradientBrush x:Key="PrimaryButtonBackgroundColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FF4687CE" Offset="0" />
+        <GradientStop Color="#FF3068A2" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="PrimaryButtonMouseOverBorderColor" Color="#FF205081" />
+    <LinearGradientBrush x:Key="PrimaryButtonMouseOverColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FF5A94D3" Offset="0" />
+        <GradientStop Color="#FF3673B5" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="PrimaryButtonPressedBorderColor" Color="#FF063667" />
+    <LinearGradientBrush x:Key="PrimaryButtonPressedColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FF407AB9" Offset="0" />
+        <GradientStop Color="#FF1C599B" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="PrimaryButtonDisabledBorderColor" Color="#FF7F9CB9" />
+    <LinearGradientBrush x:Key="PrimaryButtonDisabledColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFA2C3E6" Offset="0" />
+        <GradientStop Color="#FF97B3D0" Offset="1" />
+    </LinearGradientBrush>
 
-	<!-- Subtle Button -->
-	<SolidColorBrush x:Key="SubtleButtonBorderColor" Color="#00FFFFFF" />
-	<SolidColorBrush x:Key="SubtleButtonBackgroundColor" Color="#00FFFFFF" />
-	<SolidColorBrush x:Key="SubtleButtonMouseOverBorderColor" Color="#FF999999" />
-	<LinearGradientBrush x:Key="SubtleButtonMouseOverColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFFFFFFF" Offset="0" />
-		<GradientStop Color="#FFF7F7F7" Offset="1" />
-	</LinearGradientBrush>
-	<SolidColorBrush x:Key="SubtleButtonPressedBorderColor" Color="#FF7F7F7F" />
-	<LinearGradientBrush x:Key="SubtleButtonPressedColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFE5E5E5" Offset="0" />
-		<GradientStop Color="#FFD8D8D8" Offset="1" />
-	</LinearGradientBrush>
+    <!-- Subtle Button -->
+    <SolidColorBrush x:Key="SubtleButtonBorderColor" Color="#00FFFFFF" />
+    <SolidColorBrush x:Key="SubtleButtonBackgroundColor" Color="#00FFFFFF" />
+    <SolidColorBrush x:Key="SubtleButtonMouseOverBorderColor" Color="#FF999999" />
+    <LinearGradientBrush x:Key="SubtleButtonMouseOverColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFFFFFFF" Offset="0" />
+        <GradientStop Color="#FFF7F7F7" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="SubtleButtonPressedBorderColor" Color="#FF7F7F7F" />
+    <LinearGradientBrush x:Key="SubtleButtonPressedColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFE5E5E5" Offset="0" />
+        <GradientStop Color="#FFD8D8D8" Offset="1" />
+    </LinearGradientBrush>
 
-	<!-- Toggle Button -->
-	<SolidColorBrush x:Key="ToggleButtonCheckedBorderColor" Color="#FF7F7F7F" />
-	<LinearGradientBrush x:Key="ToggleButtonCheckedColor" StartPoint="0.5,0" EndPoint="0.5,1">
-		<GradientStop Color="#FFCCCCCC" Offset="0" />
-		<GradientStop Color="#FFDDDDDD" Offset="0.13" />
-		<GradientStop Color="#FFDDDDDD" Offset="1" />
-	</LinearGradientBrush>
+    <!-- Toggle Button -->
+    <SolidColorBrush x:Key="ToggleButtonCheckedBorderColor" Color="#FF7F7F7F" />
+    <LinearGradientBrush x:Key="ToggleButtonCheckedColor" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFCCCCCC" Offset="0" />
+        <GradientStop Color="#FFDDDDDD" Offset="0.13" />
+        <GradientStop Color="#FFDDDDDD" Offset="1" />
+    </LinearGradientBrush>
 
 
-	<ControlTemplate x:Key="ButtonCancelTemplate" TargetType="{x:Type Button}">
-		<Border x:Name="Border" CornerRadius="0" BorderThickness="0" Background="Transparent" BorderBrush="Transparent">
-			<TextBlock x:Name="Cancel" Text="Cancel" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" />
-		</Border>
-		<ControlTemplate.Triggers>
-			<Trigger Property="IsKeyboardFocused" Value="True" >
-				<Setter TargetName="Cancel" Property="TextDecorations" Value="Underline" />
-			</Trigger>
-			<Trigger Property="IsMouseOver" Value="True" >
-				<Setter TargetName="Cancel" Property="TextDecorations" Value="Underline" />
-			</Trigger>
-		</ControlTemplate.Triggers>
-	</ControlTemplate>
-	<Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
-						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsDefaulted" Value="True">
-							<Setter Property="BorderBrush" Value="{StaticResource PrimaryButtonBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource PrimaryButtonBackgroundColor}" />
-							<Setter Property="Foreground" Value="{StaticResource PrimaryButtonFontColor}" />
-						</Trigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMouseOver" Value="True" />
-								<Condition Property="IsDefaulted" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsPressed" Value="True" />
-								<Condition Property="IsDefaulted" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsEnabled" Value="False" />
-								<Condition Property="IsDefaulted" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMouseOver" Value="True" />
-								<Condition Property="IsDefaulted" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonMouseOverBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonMouseOverColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsPressed" Value="True" />
-								<Condition Property="IsDefaulted" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonPressedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonPressedColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsEnabled" Value="False" />
-								<Condition Property="IsDefaulted" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonDisabledBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonDisabledColor}" />
-						</MultiTrigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-		<Style.Triggers>
-			<Trigger Property="IsCancel" Value="True">
-				<Setter Property="Template" Value="{StaticResource ButtonCancelTemplate}" />
-				<Setter Property="Cursor" Value="Hand" />
-			</Trigger>
-		</Style.Triggers>
-	</Style>
+    <ControlTemplate x:Key="ButtonCancelTemplate" TargetType="{x:Type Button}">
+        <Border x:Name="Border" CornerRadius="0" BorderThickness="0" Background="Transparent" BorderBrush="Transparent">
+            <TextBlock x:Name="Cancel" Text="Cancel" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" />
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsKeyboardFocused" Value="True" >
+                <Setter TargetName="Cancel" Property="TextDecorations" Value="Underline" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True" >
+                <Setter TargetName="Cancel" Property="TextDecorations" Value="Underline" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
+                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="True">
+                            <Setter Property="BorderBrush" Value="{StaticResource PrimaryButtonBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource PrimaryButtonBackgroundColor}" />
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryButtonFontColor}" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsDefaulted" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsDefaulted" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="IsDefaulted" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsDefaulted" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonMouseOverBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonMouseOverColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsDefaulted" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonPressedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonPressedColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="IsDefaulted" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonDisabledBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonDisabledColor}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsCancel" Value="True">
+                <Setter Property="Template" Value="{StaticResource ButtonCancelTemplate}" />
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 
-	<Style x:Key="{x:Type ToggleButton}" TargetType="{x:Type ToggleButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ToggleButton}">
-					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
-						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-						</Trigger>
-						<Trigger Property="IsChecked" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ToggleButtonCheckedBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ToggleButtonCheckedColor}" />
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</Trigger>
-						<Trigger Property="IsEnabled" Value="False" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="{x:Type ToggleButton}" TargetType="{x:Type ToggleButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
+                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ToggleButtonCheckedBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ToggleButtonCheckedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style x:Key="{x:Type ec:PrimaryButton}" TargetType="{x:Type ec:PrimaryButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource PrimaryButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource PrimaryButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource PrimaryButtonFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource PrimaryButtonFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:PrimaryButton}">
-					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
-						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</Trigger>
-						<Trigger Property="IsEnabled" Value="False" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-	
-	<Style x:Key="{x:Type ec:SubtleButton}" TargetType="{x:Type ec:SubtleButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource SubtleButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource SubtleButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:SubtleButton}">
-					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
-						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</Trigger>
-						<Trigger Property="IsEnabled" Value="False" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="{x:Type ebc:PrimaryButton}" TargetType="{x:Type ebc:PrimaryButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource PrimaryButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryButtonFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource PrimaryButtonFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebc:PrimaryButton}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
+                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="{x:Type ebc:SubtleButton}" TargetType="{x:Type ebc:SubtleButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource SubtleButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource SubtleButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebc:SubtleButton}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
+                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style x:Key="{x:Type ec:DropDownButton}" TargetType="{x:Type ec:DropDownButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:DropDownButton}">
-					<StackPanel Orientation="Vertical">
-						<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
-							<Grid>
-								<Grid.ColumnDefinitions>
-									<ColumnDefinition Width="*" />
-									<ColumnDefinition Width="Auto" />
-								</Grid.ColumnDefinitions>
-								<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Grid.Column="0"/>
-								<Path x:Name="Arrow" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource ArrowGeometry}" Margin="10,0,0,0" Grid.Column="1" />
-							</Grid>
-						</Border>
-						<Popup PlacementTarget="{Binding ElementName=Border}" x:Name="PART_Popup" AllowsTransparency="true" HorizontalAlignment="Stretch" IsOpen="{TemplateBinding IsDropDownContentOpen}" Margin="0" Placement="Bottom" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-							<Border x:Name="DropDownBorder" Width="{Binding ElementName=Border, Path=ActualWidth}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{StaticResource DropDownBackgroundColor}" CornerRadius="{StaticResource ComboBoxDropDownCornerRadius}" HorizontalAlignment="Stretch" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-								<ContentPresenter Margin="0" Content="{TemplateBinding DropDownContent}" />
-							</Border>
-						</Popup>
-					</StackPanel>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</Trigger>
-						<Trigger Property="IsEnabled" Value="False" >
-							<Setter Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="{x:Type ebc:DropDownButton}" TargetType="{x:Type ebc:DropDownButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebc:DropDownButton}">
+                    <StackPanel Orientation="Vertical">
+                        <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Grid.Column="0"/>
+                                <Path x:Name="Arrow" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource ArrowGeometry}" Margin="10,0,0,0" Grid.Column="1" />
+                            </Grid>
+                        </Border>
+                        <Popup PlacementTarget="{Binding ElementName=Border}" x:Name="PART_Popup" AllowsTransparency="true" HorizontalAlignment="Stretch" IsOpen="{TemplateBinding IsDropDownContentOpen}" Margin="0" Placement="Bottom" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                            <Border x:Name="DropDownBorder" Width="{Binding ElementName=Border, Path=ActualWidth}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{StaticResource DropDownBackgroundColor}" CornerRadius="{StaticResource ComboBoxDropDownCornerRadius}" HorizontalAlignment="Stretch" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter Margin="0" Content="{TemplateBinding DropDownContent}" />
+                            </Border>
+                        </Popup>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" >
+                            <Setter Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style x:Key="{x:Type ec:GroupButton}" TargetType="{x:Type ec:GroupButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Panel.ZIndex" Value="0" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:GroupButton}">
-					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
-						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontalLeft}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVerticalTop}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<Trigger Property="IsMouseOver" Value="True" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-							<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</Trigger>
-						<Trigger Property="IsEnabled" Value="False" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="{x:Type ebc:GroupButton}" TargetType="{x:Type ebc:GroupButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Panel.ZIndex" Value="0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebc:GroupButton}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
+                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontalLeft}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVerticalTop}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                            <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style x:Key="{x:Type ec:GroupPrimaryButton}" TargetType="{x:Type ec:GroupPrimaryButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource PrimaryButtonFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource PrimaryButtonFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="True"/>
-		<!--<Setter Property="OverridesDefaultStyle" Value="True"/>-->
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Panel.ZIndex" Value="0" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:GroupPrimaryButton}">
-					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
-						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontalLeft}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVerticalTop}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<Trigger Property="IsMouseOver" Value="True" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-							<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</Trigger>
-						<Trigger Property="IsEnabled" Value="False" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="{x:Type ebc:GroupPrimaryButton}" TargetType="{x:Type ebc:GroupPrimaryButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryButtonFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource PrimaryButtonFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <!--<Setter Property="OverridesDefaultStyle" Value="True"/>-->
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Panel.ZIndex" Value="0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebc:GroupPrimaryButton}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
+                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontalLeft}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVerticalTop}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                            <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style x:Key="{x:Type ec:GroupDropDownButton}" TargetType="{x:Type ec:GroupDropDownButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Panel.ZIndex" Value="0" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:GroupDropDownButton}">
-					<StackPanel Orientation="Vertical">
-						<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
-							<StackPanel Orientation="Horizontal">
-								<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-								<Path x:Name="Arrow" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource ArrowGeometry}" Margin="10" />
-							</StackPanel>
-						</Border>
-						<Popup PlacementTarget="{Binding ElementName=Border}" x:Name="PART_Popup" AllowsTransparency="true" HorizontalAlignment="Stretch" IsOpen="{TemplateBinding IsDropDownContentOpen}" Margin="0" Placement="Bottom" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-							<Border x:Name="DropDownBorder" Width="{Binding ElementName=BG, Path=ActualWidth}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{StaticResource DropDownBackgroundColor}" CornerRadius="{StaticResource ComboBoxDropDownCornerRadius}" HorizontalAlignment="Stretch" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-								<ContentPresenter Margin="0" Content="{TemplateBinding DropDownContent}" />
-							</Border>
-						</Popup>
-					</StackPanel>
-					<ControlTemplate.Triggers>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontalLeft}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVerticalTop}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<Trigger Property="IsMouseOver" Value="True" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-							<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</Trigger>
-						<Trigger Property="IsEnabled" Value="False" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="{x:Type ebc:GroupDropDownButton}" TargetType="{x:Type ebc:GroupDropDownButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Panel.ZIndex" Value="0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebc:GroupDropDownButton}">
+                    <StackPanel Orientation="Vertical">
+                        <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" Padding="{TemplateBinding Padding}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
+                            <StackPanel Orientation="Horizontal">
+                                <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                                <Path x:Name="Arrow" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource ArrowGeometry}" Margin="10" />
+                            </StackPanel>
+                        </Border>
+                        <Popup PlacementTarget="{Binding ElementName=Border}" x:Name="PART_Popup" AllowsTransparency="true" HorizontalAlignment="Stretch" IsOpen="{TemplateBinding IsDropDownContentOpen}" Margin="0" Placement="Bottom" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                            <Border x:Name="DropDownBorder" Width="{Binding ElementName=BG, Path=ActualWidth}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{StaticResource DropDownBackgroundColor}" CornerRadius="{StaticResource ComboBoxDropDownCornerRadius}" HorizontalAlignment="Stretch" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter Margin="0" Content="{TemplateBinding DropDownContent}" />
+                            </Border>
+                        </Popup>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontalLeft}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVerticalTop}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                            <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style x:Key="{x:Type ec:GroupToggleButton}" TargetType="{x:Type ec:GroupToggleButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="True"/>
-		<!--<Setter Property="OverridesDefaultStyle" Value="True"/>-->
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Panel.ZIndex" Value="0" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:GroupToggleButton}">
-					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
-						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontalLeft}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVerticalTop}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsFirst" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMiddle" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsLast" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-								<Condition Property="IsMouseOver" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsChecked" Value="True" />
-								<Condition Property="Orientation" Value="Horizontal" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ToggleButtonCheckedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ToggleButtonCheckedColor}" />
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="-1,0,0,0" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsChecked" Value="True" />
-								<Condition Property="Orientation" Value="Vertical" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ToggleButtonCheckedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ToggleButtonCheckedColor}" />
-							<Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-							<Setter Property="Panel.ZIndex" Value="2" />
-							<Setter Property="Margin" Value="0,-1,0,0" />
-						</MultiTrigger>
-						<Trigger Property="IsMouseOver" Value="True" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-							<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</Trigger>
-						<Trigger Property="IsEnabled" Value="False" >
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="{x:Type ebc:GroupToggleButton}" TargetType="{x:Type ebc:GroupToggleButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <!--<Setter Property="OverridesDefaultStyle" Value="True"/>-->
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Panel.ZIndex" Value="0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebc:GroupToggleButton}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
+                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontalLeft}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessHorizontal}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVerticalTop}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThicknessVertical}" />
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusLeft}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusRight}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFirst" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusTop}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMiddle" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusMiddle}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsLast" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="CornerRadius" Value="{StaticResource ButtonGroupCornerRadiusBottom}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="Orientation" Value="Horizontal" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ToggleButtonCheckedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ToggleButtonCheckedColor}" />
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="-1,0,0,0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="Orientation" Value="Vertical" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ToggleButtonCheckedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ToggleButtonCheckedColor}" />
+                            <Setter TargetName="Border" Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+                            <Setter Property="Panel.ZIndex" Value="2" />
+                            <Setter Property="Margin" Value="0,-1,0,0" />
+                        </MultiTrigger>
+                        <Trigger Property="IsMouseOver" Value="True" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                            <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False" >
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style x:Key="{x:Type ec:SplitButton}" TargetType="{x:Type ec:SplitButton}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="MinHeight" Value="32" />
-		<Setter Property="Margin" Value="0" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:SplitButton}">
-					<StackPanel x:Name="Border" Orientation="Vertical">
-						<Grid>
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="*" />
-								<ColumnDefinition Width="Auto" />
-							</Grid.ColumnDefinitions>
-							<ec:GroupButton x:Name="ClickButton" Grid.Column="0" Padding="{TemplateBinding Padding}" Orientation="Horizontal" IsFirst="True" IsEnabled="{TemplateBinding IsEnabled}" >
-								<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-								<ec:GroupButton.Style>
-									<Style TargetType="{x:Type ec:GroupButton}" BasedOn="{StaticResource {x:Type ec:GroupButton}}">
-										<Style.Triggers>
-											<Trigger Property="IsMouseOver" Value="True">
-												<Setter Property="BorderThickness" Value="1" />
-											</Trigger>
-											<Trigger Property="IsPressed" Value="True">
-												<Setter Property="BorderThickness" Value="1" />
-											</Trigger>
-										</Style.Triggers>
-									</Style>
-								</ec:GroupButton.Style>
-							</ec:GroupButton>
-							<ec:GroupToggleButton x:Name="DropButton" Grid.Column="1" Padding="0" IsChecked="{TemplateBinding IsDropDownOpen}" Orientation="Horizontal" IsLast="True" IsEnabled="{TemplateBinding IsEnabled}" >
-								<Path x:Name="Arrow" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource ArrowGeometry}" Margin="10" />
-							</ec:GroupToggleButton>
-						</Grid>
-						<Popup PlacementTarget="{Binding ElementName=Border}" x:Name="PART_Popup" AllowsTransparency="true" HorizontalAlignment="Stretch" IsOpen="{TemplateBinding IsSplitContentOpen}" Margin="0" Placement="Bottom" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-							<Border x:Name="DropDownBorder" Width="{TemplateBinding ActualWidth}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{StaticResource DropDownBackgroundColor}" CornerRadius="{StaticResource ComboBoxDropDownCornerRadius}" HorizontalAlignment="Stretch" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-								<ContentPresenter Margin="0" Content="{TemplateBinding SplitContent}" />
-							</Border>
-						</Popup>
-					</StackPanel>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="{x:Type ebc:SplitButton}" TargetType="{x:Type ebc:SplitButton}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="MinHeight" Value="32" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebc:SplitButton}">
+                    <StackPanel x:Name="Border" Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ebc:GroupButton x:Name="ClickButton" Grid.Column="0" Padding="{TemplateBinding Padding}" Orientation="Horizontal" IsFirst="True" IsEnabled="{TemplateBinding IsEnabled}" >
+                                <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                                <ebc:GroupButton.Style>
+                                    <Style TargetType="{x:Type ebc:GroupButton}" BasedOn="{StaticResource {x:Type ebc:GroupButton}}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="BorderThickness" Value="1" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="BorderThickness" Value="1" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ebc:GroupButton.Style>
+                            </ebc:GroupButton>
+                            <ebc:GroupToggleButton x:Name="DropButton" Grid.Column="1" Padding="0" IsChecked="{TemplateBinding IsDropDownOpen}" Orientation="Horizontal" IsLast="True" IsEnabled="{TemplateBinding IsEnabled}" >
+                                <Path x:Name="Arrow" Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{StaticResource ArrowGeometry}" Margin="10" />
+                            </ebc:GroupToggleButton>
+                        </Grid>
+                        <Popup PlacementTarget="{Binding ElementName=Border}" x:Name="PART_Popup" AllowsTransparency="true" HorizontalAlignment="Stretch" IsOpen="{TemplateBinding IsSplitContentOpen}" Margin="0" Placement="Bottom" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                            <Border x:Name="DropDownBorder" Width="{TemplateBinding ActualWidth}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{StaticResource DropDownBackgroundColor}" CornerRadius="{StaticResource ComboBoxDropDownCornerRadius}" HorizontalAlignment="Stretch" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter Margin="0" Content="{TemplateBinding SplitContent}" />
+                            </Border>
+                        </Popup>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style x:Key="{x:Type ec:DialogActionBase}" TargetType="{x:Type ec:DialogActionBase}">
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
-		<Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
-		<Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
-		<Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
-		<Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
-		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
-		<Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
-		<Setter Property="UseLayoutRounding" Value="true"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center" />
-		<Setter Property="VerticalContentAlignment" Value="Center" />
-		<Setter Property="Margin" Value="10,0,0,0" />
-		<Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ec:DialogActionBase}">
-					<Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
-						<ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsDefaulted" Value="True">
-							<Setter Property="BorderBrush" Value="{StaticResource PrimaryButtonBorderColor}" />
-							<Setter Property="Background" Value="{StaticResource PrimaryButtonBackgroundColor}" />
-							<Setter Property="Foreground" Value="{StaticResource PrimaryButtonFontColor}" />
-						</Trigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMouseOver" Value="True" />
-								<Condition Property="IsDefaulted" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsPressed" Value="True" />
-								<Condition Property="IsDefaulted" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsEnabled" Value="False" />
-								<Condition Property="IsDefaulted" Value="False" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsMouseOver" Value="True" />
-								<Condition Property="IsDefaulted" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonMouseOverBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonMouseOverColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsPressed" Value="True" />
-								<Condition Property="IsDefaulted" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonPressedBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonPressedColor}" />
-						</MultiTrigger>
-						<MultiTrigger>
-							<MultiTrigger.Conditions>
-								<Condition Property="IsEnabled" Value="False" />
-								<Condition Property="IsDefaulted" Value="True" />
-							</MultiTrigger.Conditions>
-							<Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonDisabledBorderColor}" />
-							<Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonDisabledColor}" />
-						</MultiTrigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-		<Style.Triggers>
-			<Trigger Property="IsCancel" Value="True">
-				<Setter Property="Template" Value="{StaticResource ButtonCancelTemplate}" />
-				<Setter Property="Cursor" Value="Hand" />
-			</Trigger>
-		</Style.Triggers>
-	</Style>
+    <Style x:Key="{x:Type ebcd:DialogActionBase}" TargetType="{x:Type ebcd:DialogActionBase}">
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderColor}" />
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
+        <Setter Property="Foreground" Value="{StaticResource DefaultFontColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontWeight" Value="{StaticResource DefaultFontWeight}" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="BorderThickness" Value="{StaticResource ButtonGroupBorderThickness}" />
+        <Setter Property="UseLayoutRounding" Value="true"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="Padding" Value="{StaticResource ButtonPadding}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ebcd:DialogActionBase}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource ButtonCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Padding="{TemplateBinding Padding}" >
+                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="True">
+                            <Setter Property="BorderBrush" Value="{StaticResource PrimaryButtonBorderColor}" />
+                            <Setter Property="Background" Value="{StaticResource PrimaryButtonBackgroundColor}" />
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryButtonFontColor}" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsDefaulted" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonMouseOverBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonMouseOverColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsDefaulted" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonPressedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonPressedColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="IsDefaulted" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource ButtonDisabledBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource ButtonDisabledColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsDefaulted" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonMouseOverBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonMouseOverColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsPressed" Value="True" />
+                                <Condition Property="IsDefaulted" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonPressedBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonPressedColor}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="IsDefaulted" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PrimaryButtonDisabledBorderColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryButtonDisabledColor}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsCancel" Value="True">
+                <Setter Property="Template" Value="{StaticResource ButtonCancelTemplate}" />
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 
 
 </ResourceDictionary>

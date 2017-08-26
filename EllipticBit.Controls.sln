@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26020.0
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllipticBit.Controls.WPF", "EllipticBit.Controls.WPF\EllipticBit.Controls.WPF.csproj", "{9DF66A92-56D8-4DE9-87D6-3878F46B22FA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllipticBit.Controls.WPF.Themes.Light", "EllipticBit.Controls.WPF.Themes.Light\EllipticBit.Controls.WPF.Themes.Light.csproj", "{3436CA19-55A1-4297-9FE3-4B109F013B33}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllipticBit.Controls.WPF.Themes.Dark", "EllipticBit.Controls.WPF.Themes.Dark\EllipticBit.Controls.WPF.Themes.Dark.csproj", "{6AB172B8-B91F-4DFE-A1E1-714F489C5396}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{73487EF0-0F67-4487-81F0-E07A5E412AD5}"
 EndProject
@@ -21,14 +17,6 @@ Global
 		{9DF66A92-56D8-4DE9-87D6-3878F46B22FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DF66A92-56D8-4DE9-87D6-3878F46B22FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DF66A92-56D8-4DE9-87D6-3878F46B22FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3436CA19-55A1-4297-9FE3-4B109F013B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3436CA19-55A1-4297-9FE3-4B109F013B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3436CA19-55A1-4297-9FE3-4B109F013B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3436CA19-55A1-4297-9FE3-4B109F013B33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6AB172B8-B91F-4DFE-A1E1-714F489C5396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AB172B8-B91F-4DFE-A1E1-714F489C5396}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AB172B8-B91F-4DFE-A1E1-714F489C5396}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AB172B8-B91F-4DFE-A1E1-714F489C5396}.Release|Any CPU.Build.0 = Release|Any CPU
 		{73487EF0-0F67-4487-81F0-E07A5E412AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{73487EF0-0F67-4487-81F0-E07A5E412AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73487EF0-0F67-4487-81F0-E07A5E412AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2E78CA4-3C81-423D-AE82-03F65405C273}
 	EndGlobalSection
 EndGlobal

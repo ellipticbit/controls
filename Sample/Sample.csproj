@@ -95,14 +95,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EllipticBit.Controls.WPF.Themes.Dark\EllipticBit.Controls.WPF.Themes.Dark.csproj">
-      <Project>{6ab172b8-b91f-4dfe-a1e1-714f489c5396}</Project>
-      <Name>EllipticBit.Controls.WPF.Themes.Dark</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EllipticBit.Controls.WPF.Themes.Light\EllipticBit.Controls.WPF.Themes.Light.csproj">
-      <Project>{3436ca19-55a1-4297-9fe3-4b109f013b33}</Project>
-      <Name>EllipticBit.Controls.WPF.Themes.Light</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EllipticBit.Controls.WPF\EllipticBit.Controls.WPF.csproj">
       <Project>{9df66a92-56d8-4de9-87d6-3878f46b22fa}</Project>
       <Name>EllipticBit.Controls.WPF</Name>
